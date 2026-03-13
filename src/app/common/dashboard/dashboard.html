@@ -1,0 +1,397 @@
+<!-- dashboard-content.component.html -->
+<app-header [showHeader]="!activePlan ? 'dashboard' : 'withPlan'"></app-header>
+<div class="max-w-7xl mx-auto px-4 py-4 sm:py-8">
+    <header class="mb-6 sm:mb-8">
+        <h1 class="text-gray-900 mb-2 text-2xl sm:text-3xl">Video Analytics Dashboard</h1>
+        <p class="text-gray-600 text-sm sm:text-base">
+            {{ isDemoMode()
+            ? 'Explore AI-powered insights from 1,000+ analyzed videos'
+            : 'Analyze your video performance with AI-powered insights' }}
+        </p>
+
+        <!-- Mobile Tab Dropdown -->
+        <div class="mt-4 md:hidden">
+            <div class="relative">
+                <button (click)="toggleMobileMenu()"
+                    class="w-full flex items-center justify-between bg-white border-2 border-gray-200 rounded-lg px-4 py-3">
+                    <span class="flex items-center gap-2 text-gray-900">
+                        @if (activeTab() === 'overview') {
+                        <span class="w-4 h-4">📊</span> <!-- Replace with actual icon component -->
+                        }
+                        {{ currentTab()?.shortLabel }}
+                        @if (currentTab()?.isPro) {
+                        <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">Pro</span>
+                        }
+                    </span>
+                    <span class="w-5 h-5">{{ mobileMenuOpen() ? '✕' : '☰' }}</span>
+                </button>
+
+                @if (mobileMenuOpen()) {
+                <div
+                    class="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50">
+                    @for (tab of tabs; track tab.id) {
+                    <button (click)="setActiveTab(tab.id); setMobileMenuOpen(false)"
+                        class="w-full text-left px-4 py-3 transition-colors" [class.bg-blue-50]="activeTab() === tab.id"
+                        [class.text-blue-600]="activeTab() === tab.id" [class.border-l-4]="activeTab() === tab.id"
+                        [class.border-blue-600]="activeTab() === tab.id"
+                        [class.hover:bg-gray-50]="activeTab() !== tab.id" [class.text-gray-700]="activeTab() !== tab.id"
+                        [class.border-l-4]="activeTab() !== tab.id" [class.border-transparent]="activeTab() !== tab.id">
+                        <div class="flex items-center justify-between">
+                            <span>{{ tab.label }}</span>
+                            @if (tab.isPro) {
+                            <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">Pro</span>
+                            }
+                        </div>
+                    </button>
+                    }
+                </div>
+                }
+            </div>
+        </div>
+
+        <!-- Desktop Tab Navigation -->
+        <div class="hidden md:flex flex-wrap gap-2 mt-4">
+            @for (tab of tabs; track tab.id) {
+            <button (click)="setActiveTab(tab.id)"
+                class="px-4 lg:px-6 py-2 rounded-lg transition-colors text-sm lg:text-base"
+                [class.bg-blue-600]="activeTab() === tab.id" [class.text-white]="activeTab() === tab.id"
+                [class.bg-white]="activeTab() !== tab.id" [class.text-gray-700]="activeTab() !== tab.id"
+                [class.border]="activeTab() !== tab.id" [class.border-gray-200]="activeTab() !== tab.id"
+                [class.hover:bg-gray-50]="activeTab() !== tab.id">
+                <span class="hidden lg:inline">{{ tab.label }}</span>
+                <span class="lg:hidden">{{ tab.shortLabel }}</span>
+                @if (tab.isPro) {
+                <span class="ml-2 text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">Pro</span>
+                }
+            </button>
+            }
+        </div>
+    </header>
+
+    <!-- Overview Tab -->
+    @if (activeTab() === 'overview') {
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div class="lg:col-span-2 order-2 lg:order-1">
+            <!-- Overview Component -->
+            <app-overview (setVideoForm)="setShowUploadForm($event)"></app-overview>
+        </div>
+
+        <div class="lg:col-span-1 order-1 lg:order-2">
+            @if (showUploadForm() && !isDemoMode()) {
+            <div class="sticky top-20">
+                <!-- VideoUploadForm Component -->
+                <div>VideoUploadForm Component Placeholder</div>
+            </div>
+            } @else if (selectedVideo()) {
+            <div class="sticky top-20">
+                @if (!hasFeatureAccess('starter')) {
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-sm p-4 sm:p-6 border-2 border-blue-200">
+                    <h3 class="text-gray-900 mb-3 text-lg sm:text-xl">🔒 Unlock AI Predictions</h3>
+                    <p class="text-gray-700 mb-4 text-sm sm:text-base">
+                        {{ isDemoMode()
+                        ? 'Reserve a plan to unlock instant AI predictions for your videos.'
+                        : 'Upgrade to unlock AI predictions and recommendations.' }}
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+                            <span class="w-4 h-4 text-green-600 flex-shrink-0">✓</span>
+                            <span>Predicted views & engagement</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+                            <span class="w-4 h-4 text-green-600 flex-shrink-0">✓</span>
+                            <span>AI-powered recommendations</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+                            <span class="w-4 h-4 text-green-600 flex-shrink-0">✓</span>
+                            <span>Audience optimization tips</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+                            <span class="w-4 h-4 text-green-600 flex-shrink-0">✓</span>
+                            <span>Performance comparisons</span>
+                        </li>
+                    </ul>
+                    <button (click)="setView('pricing')"
+                        class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
+                        {{ isDemoMode() ? 'Reserve a Plan to Unlock' : 'Upgrade to Unlock' }}
+                    </button>
+                    @if (isDemoMode()) {
+                    <p class="text-gray-600 text-center mt-3 text-sm">
+                        No payment required - Just reserve!
+                    </p>
+                    }
+                </div>
+                } @else {
+                <!-- PredictionPanel Component -->
+                <div>PredictionPanel Component Placeholder</div>
+                }
+            </div>
+            } @else {
+                @if(!showUploadForm()){
+                <div class="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-200 sticky top-20">
+                <p class="text-gray-500 text-center mb-4 text-sm sm:text-base">
+                    @if(isDemoMode() && !activePlan){
+                    {{'Click on any video in the bubble chart to see its details'}}
+                    }@else if(isDemoMode() && activePlan() && !showUploadForm() ){
+                        {{'Upload a video to see AI predictions'}}
+                    }
+                </p>
+                @if (isDemoMode() && !activePlan() && !showUploadForm()) {
+                <button routerLink="/pricing" (click)="setView('pricing')"
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
+                    Sign Up to Analyze Your Videos
+                </button>
+                }
+               </div>
+                }
+                @if(activePlan() && showUploadForm()){
+                <div class="lg:col-span-1 order-1 lg:order-2">
+                    <div class="sticky top-20">
+                        <div
+                            class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 max-h-[90vh] overflow-y-auto">
+                            <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                <h2 class="text-gray-900 text-lg sm:text-xl">Upload New Video</h2>
+                                <button
+                                    class="text-gray-400 hover:text-gray-600 transition-colors"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-x w-5 h-5">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            @if(dropDownData() && dropDownData().length){
+                                <form class="space-y-4" [formGroup]="videoForm">
+                                    <div><label class="block text-gray-700 mb-2">Video File</label>
+                                        <div class="relative">
+                                            <input type="file" accept="video/*" class="hidden"
+                                                id="video-upload" (change)="handleVideoUpload($event)">
+                                                <label for="video-upload"
+                                                class="flex items-center justify-center gap-2 w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-upload w-5 h-5 text-gray-400">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                                    <line x1="12" x2="12" y1="3" y2="15"></line>
+                                                </svg><span class="text-gray-600">Choose video file</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="title" class="block text-gray-700 mb-2">Title</label>
+                                        <input type="text" formControlName="title"
+                                            id="title"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            placeholder="Enter video title" value="">
+                                    </div>
+                                    <div>
+                                        <label for="category" class="block text-gray-700 mb-2">Category 
+                                            <span
+                                                class="text-red-500">*</span>
+                                        </label>
+                                        <select id="category" formControlName="category"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            >
+                                            <option value="">Select Category</option>
+                                            @for(item of dropDownData()[0]?.Category ; track $index){
+                                                <option [ngValue]="item">{{item.displayName}}</option>
+                                            }
+                                        </select></div>
+                                    <div>
+                                        <label for="secondaryCategory" class="block text-gray-700 mb-2">Secondary Category
+                                            <span class="text-red-500">*</span>
+                                        </label>
+                                        <select id="secondaryCategory" formControlName="s_category"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            required="">
+                                            <option value="">Select secondary category</option>
+                                            @for(item of dropDownData()[0].Industry ; track $index){
+                                                <option [value]="item">{{item.displayName}}</option>
+                                            }
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="theme" class="block text-gray-700 mb-2">Theme </label>
+                                        <select formControlName="theme"
+                                            id="theme"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            >
+                                            <option value="">Select category first</option>
+                                            @for(item of dropDownData()[0].Genre ; track $index){
+                                                <option [value]="item">{{item.displayName}}</option>
+                                            }
+                                        </select>
+                                        <p class="text-sm text-gray-500 mt-1">Please select a category first to see relevant
+                                            themes</p>
+                                    </div>
+                                    <div>
+                                        <label for="duration" class="block text-gray-700 mb-2">Duration
+                                            (seconds)</label>
+                                            <input type="number" id="duration" formControlName="duration"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            placeholder="e.g., 600" min="1" value="">
+                                        </div>
+                                    <div><label for="demographics" class="block text-gray-700 mb-2">Target
+                                            Demographics</label>
+                                            <select id="demographics" formControlName="target_demographics"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select age group</option>
+                                            <option value="13-17">13-17</option>
+                                            <option value="18-24">18-24</option>
+                                            <option value="25-34">25-34</option>
+                                            <option value="35-44">35-44</option>
+                                            <option value="45-54">45-54</option>
+                                            <option value="55+">55+</option>
+                                        </select></div>
+                                    <div><label for="banner" class="block text-gray-700 mb-2">Banner Style </label>
+                                        <select formControlName="banner_style"
+                                            id="banner"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            >
+                                            <option value="">Select theme first</option>
+                                        </select></div>
+                                    <div><label for="platform" class="block text-gray-700 mb-2">Target
+                                            Platform</label>
+                                            <select id="platform" formControlName="target_platform"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select platform</option>
+                                            @for(item of dropDownData()[0]['Promotion Platform/Channel'] ; track $index){
+                                                <option [value]="item">{{item.displayName}}</option>
+                                            }
+                                        </select></div>
+                                    <div><label for="ottPlatform" class="block text-gray-700 mb-2">OTT Streaming
+                                            Platform</label>
+                                            <select id="ottPlatform" formControlName="ott_platoform"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select OTT platform</option>
+                                            <option value="Netflix">Netflix</option>
+                                            <option value="Amazon Prime Video">Amazon Prime Video</option>
+                                            <option value="Disney+">Disney+</option>
+                                            <option value="Hulu">Hulu</option>
+                                            <option value="HBO Max">HBO Max</option>
+                                            <option value="Peacock TV">Peacock TV</option>
+                                            <option value="Apple TV+">Apple TV+</option>
+                                            <option value="Paramount+">Paramount+</option>
+                                            <option value="Discovery+">Discovery+</option>
+                                        </select></div><button type="submit" disabled=""
+                                        class="w-full bg-blue-600 text-white py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed text-sm sm:text-base">Analyze
+                                        Video</button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+                }
+   
+            }
+        </div>
+    </div>
+    }
+
+    <!-- Category Tab -->
+    @if (activeTab() === 'category') {
+    <!-- CategoryPerformance Component -->
+    <div>CategoryPerformance Component Placeholder</div>
+    }
+
+    <!-- Theme Tab -->
+    @if (activeTab() === 'theme') {
+    @if (!hasFeatureAccess('professional')) {
+    <!-- Pro Feature Locked UI -->
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-6 sm:p-12 text-center">
+        <!-- ... Pro feature locked content ... -->
+    </div>
+    } @else {
+    <!-- ThemePerformance Component -->
+    <div>ThemePerformance Component Placeholder</div>
+    }
+    }
+
+    <!-- Platform Tab -->
+    @if (activeTab() === 'platform') {
+    @if (!hasFeatureAccess('professional')) {
+    <!-- Pro Feature Locked UI -->
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-6 sm:p-12 text-center">
+        <!-- ... Pro feature locked content ... -->
+    </div>
+    } @else {
+    <!-- PlatformPerformance Component -->
+    <div>PlatformPerformance Component Placeholder</div>
+    }
+    }
+
+    <!-- Testing Tab -->
+    @if (activeTab() === 'testing') {
+    @if (!hasFeatureAccess('professional')) {
+    <!-- Pro Feature Locked UI -->
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-6 sm:p-12 text-center">
+        <!-- ... Pro feature locked content ... -->
+    </div>
+    } @else {
+    <!-- TestingAnalysisMetrics Component -->
+    <div>TestingAnalysisMetrics Component Placeholder</div>
+    }
+    }
+
+    <!-- Demographics Tab -->
+    @if (activeTab() === 'demographics') {
+    @if (!hasFeatureAccess('professional')) {
+    <!-- Pro Feature Locked UI -->
+    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border border-gray-200 p-6 sm:p-12 text-center">
+        <div class="max-w-2xl mx-auto">
+            <div class="flex justify-center mb-6">
+                <div class="relative">
+                    <!-- Lock icon SVG -->
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="28" width="40" height="28" rx="4" fill="#F59E0B" />
+                        <path d="M20 28V20C20 13.3726 25.3726 8 32 8C38.6274 8 44 13.3726 44 20V28" stroke="#9CA3AF"
+                            stroke-width="6" stroke-linecap="round" />
+                        <circle cx="32" cy="42" r="4" fill="#1F2937" />
+                        <rect x="30" y="42" width="4" height="8" fill="#1F2937" />
+                    </svg>
+                </div>
+            </div>
+            <h2 class="text-gray-900 mb-4 text-xl sm:text-2xl">Unlock Audience Demographics Analysis</h2>
+            <p class="text-gray-600 mb-6 text-sm sm:text-base">
+                Get detailed audience insights across all age groups with our Professional plan.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div class="bg-white rounded-lg p-4">
+                    <p class="text-green-600 mb-1">6 Age Groups</p>
+                    <p class="text-gray-600 text-sm">Complete demographic analysis</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                    <p class="text-green-600 mb-1">AI Scoring</p>
+                    <p class="text-gray-600 text-sm">Audience potential ranking</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                    <p class="text-green-600 mb-1">Smart Tips</p>
+                    <p class="text-gray-600 text-sm">Content strategy recommendations</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                    <p class="text-green-600 mb-1">Visual Charts</p>
+                    <p class="text-gray-600 text-sm">Interactive engagement graphs</p>
+                </div>
+            </div>
+            <button (click)="setView('pricing')"
+                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
+                {{ reservedPlan() ? 'View My Reserved Plan' : isDemoMode() ? 'Reserve Professional Plan' : 'Upgrade to
+                Professional' }}
+            </button>
+            @if (isDemoMode()) {
+            <p class="text-gray-600 mt-4 text-sm">
+                {{ reservedPlan() ? '✓ Plan Reserved - Features unlocking soon!' : 'Reserve now, pay later (Dec 31st)'
+                }}
+            </p>
+            }
+        </div>
+    </div>
+    } @else {
+    <!-- AudienceDemographics Component -->
+    <div>AudienceDemographics Component Placeholder</div>
+    }
+    }
+</div>

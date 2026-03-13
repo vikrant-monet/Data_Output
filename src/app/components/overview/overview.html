@@ -1,0 +1,192 @@
+<!-- dashboard.component.html -->
+<div class="space-y-4 sm:space-y-6">
+    <!-- Premium Hero Header -->
+    <div class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 rounded-3xl shadow-2xl overflow-hidden"
+        [class.animate-pulse]="animationState() === 'animating'">
+        <!-- Animated Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px">
+            </div>
+        </div>
+
+        <!-- Gradient Orbs -->
+        <div
+            class="absolute -top-24 -right-24 w-96 h-96 bg-pink-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-pulse">
+        </div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-pulse"
+            style="animation-delay: 1s"></div>
+
+
+        <div
+            class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0px); background-size: 40px 40px;">
+                </div>
+            </div>
+            <div
+                class="absolute -top-24 -right-24 w-96 h-96 bg-pink-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-pulse">
+            </div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-indigo-400 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-pulse"
+                style="animation-delay: 1s;"></div>
+            <div class="relative p-6 sm:p-8 lg:p-10">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-white rounded-2xl blur-md opacity-50"></div>
+                                <div
+                                    class="relative bg-white/20 backdrop-blur-xl p-3.5 rounded-2xl border border-white/30 shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-activity w-7 h-7 text-white">
+                                        <path
+                                            d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2">
+                                        </path>
+                                    </svg></div>
+                            </div>
+                            <div>
+                                <h1 class="text-white text-3xl sm:text-4xl lg:text-5xl tracking-tight">Video Analytics
+                                </h1>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div
+                                        class="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50">
+                                    </div><span class="text-white/90 text-sm">Real-time insights</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white/90 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl">AI-powered
+                            analytics to decode video performance across platforms, audiences, and content types</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <div
+                                class="bg-white/10 backdrop-blur-xl px-4 py-2.5 rounded-xl border border-white/20 shadow-lg">
+                                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-video w-4 h-4 text-white/80">
+                                        <path
+                                            d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5">
+                                        </path>
+                                        <rect x="2" y="6" width="14" height="12" rx="2"></rect>
+                                    </svg>
+                                    <div><span class="text-white text-xl">1,000</span><span
+                                            class="text-white/70 text-sm ml-2">videos analyzed</span></div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white/10 backdrop-blur-xl px-4 py-2.5 rounded-xl border border-white/20 shadow-lg">
+                                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-database w-4 h-4 text-white/80">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                                        <path d="M3 12A9 3 0 0 0 21 12"></path>
+                                    </svg>
+                                    <div><span class="text-white text-xl">9</span><span
+                                            class="text-white/70 text-sm ml-2">platforms tracked</span></div>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white/10 backdrop-blur-xl px-4 py-2.5 rounded-xl border border-white/20 shadow-lg">
+                                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-sparkles w-4 h-4 text-yellow-300">
+                                        <path
+                                            d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z">
+                                        </path>
+                                        <path d="M20 3v4"></path>
+                                        <path d="M22 5h-4"></path>
+                                        <path d="M4 17v2"></path>
+                                        <path d="M5 18H3"></path>
+                                    </svg><span class="text-white text-sm">AI-Powered Predictions</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-auto flex flex-col items-stretch lg:items-end gap-3">
+                        <button (click)="onUploadClick()"
+                            class="group relative bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                            <div class="relative flex items-center justify-center gap-3">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-upload w-6 h-6">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" x2="12" y1="3" y2="15"></line>
+                                </svg>
+                                <div class="text-left">
+                                    <div class="text-lg">Upload Video</div>
+                                    <div class="text-xs text-gray-600">Get instant AI predictions</div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="flex items-center justify-center gap-2 text-white/80 text-xs"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-trending-up w-3.5 h-3.5">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                                <polyline points="16 7 22 7 22 13"></polyline>
+                            </svg><span>Powered by advanced machine learning</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Stats Overview with Modern Design -->
+    <app-stats-overview></app-stats-overview>
+
+    <!-- Video Comparison - Enhanced Card -->
+    @if (selectedVideo()) {
+    <div class="animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <!-- <app-video-comparison [video]="selectedVideo()"></app-video-comparison> -->
+    </div>
+    }
+
+    <!-- Bubble Visualization -->
+    <!-- <app-bubble-chart-visualization [selectedVideo]="selectedVideo()"></app-bubble-chart-visualization> -->
+
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <!-- <app-category-distribution [selectedVideo]="selectedVideo()"></app-category-distribution> -->
+        <!-- <app-duration-analysis [selectedVideo]="selectedVideo()"></app-duration-analysis> -->
+    </div>
+
+    <!-- Secondary Category -->
+    <!-- <app-secondary-category-distribution [selectedVideo]="selectedVideo()"></app-secondary-category-distribution> -->
+
+    <!-- Platform Distribution -->
+    <!-- <app-platform-distribution></app-platform-distribution> -->
+
+    <!-- Platform Simulator -->
+    @if (selectedVideo()) {
+    <div class="animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <!-- <app-platform-simulator [video]="selectedVideo()"></app-platform-simulator> -->
+    </div>
+    }
+
+    <!-- Performance Metrics -->
+    <!-- <app-performance-metrics [selectedVideo]="selectedVideo()"></app-performance-metrics> -->
+
+    <!-- Testing Analysis -->
+    @if (isTestingCategory()) {
+    <!-- <app-testing-analysis-metrics [selectedVideo]="selectedVideo()"></app-testing-analysis-metrics> -->
+    }
+
+    <!-- Example Reactive Form (if needed) -->
+    <form [formGroup]="dashboardForm" (ngSubmit)="onSubmit()" class="hidden">
+        <input type="text" formControlName="searchControl">
+        <select formControlName="filterControl">
+            <option value="all">All</option>
+            <option value="tested">Tested</option>
+        </select>
+    </form>
+</div>
