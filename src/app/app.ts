@@ -6,7 +6,7 @@ import { Pricing } from './components/pricing/pricing';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , Landing , Dashboard , Pricing],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,8 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output, Signal, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { StatsOverview } from '../stats-overview/stats-overview';
+import { BubbleChart } from '../bubble-chart/bubble-chart';
+import { SecondaryCategoryDistribution } from '../secondary-category-distribution/secondary-category-distribution';
+import { Api } from '../../services/api';
+import { SecondaryCategoryPlatform } from '../secondary-category-platform/secondary-category-platform';
 
 // Import types
 // import { VideoMetadata } from '../../types/video';
@@ -20,7 +23,7 @@ interface VideoMetadata {
 
 @Component({
   selector: 'app-overview',
-  imports: [CommonModule, ReactiveFormsModule , StatsOverview],
+  imports: [CommonModule, ReactiveFormsModule , StatsOverview , BubbleChart , SecondaryCategoryDistribution , SecondaryCategoryPlatform],
   templateUrl: './overview.html',
   styleUrl: './overview.scss',
 })
@@ -36,6 +39,8 @@ export class Overview  implements OnInit {
   set selectedVideoInput(value: VideoMetadata | null) {
     this.selectedVideoSignal.set(value);
   }
+@Input() distribution!:any;
+@Input() platform!: any;
 
   @Output() setVideoForm = new EventEmitter<any>()
   setShow = signal<boolean>(false);
@@ -45,6 +50,7 @@ export class Overview  implements OnInit {
 
   // Computed signals
   testingCategories = ['Ad Testing', 'Movie Testing', 'Concept Testing', 'A/B Testing', 'UX Testing'];
+
   
   isTestingCategory: Signal<boolean> = computed(() => {
     const video = this.selectedVideo();
@@ -60,7 +66,7 @@ export class Overview  implements OnInit {
   // Form group for any form functionality
   dashboardForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder , private api : Api) {
     // Initialize reactive form if needed
     this.dashboardForm = this.fb.group({
       // Add form controls as needed
@@ -71,6 +77,8 @@ export class Overview  implements OnInit {
 
   ngOnInit(): void {
     // Any initialization logic
+    // console.log(this.distribution,'fsdfasfsadfs');
+    
   }
 
   // Animation state signal
@@ -79,7 +87,7 @@ export class Overview  implements OnInit {
   onUploadClick(): void {
     // this.uploadClick.emit();
     // For now, we'll just log
-    console.log('Upload clicked');
+    // console.log('Upload clicked');
     this.animationState.set('animating');
     this.setShow.set(!this.setShow())
     this.setVideoForm.emit(this.setShow());
@@ -105,8 +113,10 @@ export class Overview  implements OnInit {
   // Form submission handler example
   onSubmit(): void {
     if (this.dashboardForm.valid) {
-      console.log('Form submitted:', this.dashboardForm.value);
+      // console.log('Form submitted:', this.dashboardForm.value);
       // Handle form submission
     }
   }
+
+
 }

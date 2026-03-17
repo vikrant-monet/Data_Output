@@ -152,7 +152,7 @@
     }
 
     <!-- Bubble Visualization -->
-    <!-- <app-bubble-chart-visualization [selectedVideo]="selectedVideo()"></app-bubble-chart-visualization> -->
+   <app-bubble-chart></app-bubble-chart>
 
     <!-- Two Column Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
@@ -161,10 +161,15 @@
     </div>
 
     <!-- Secondary Category -->
-    <!-- <app-secondary-category-distribution [selectedVideo]="selectedVideo()"></app-secondary-category-distribution> -->
+
+         <app-secondary-category-distribution [distribution]="distribution"></app-secondary-category-distribution>
+     
 
     <!-- Platform Distribution -->
     <!-- <app-platform-distribution></app-platform-distribution> -->
+
+         <app-secondary-category-platform [platform]="platform"></app-secondary-category-platform>
+     
 
     <!-- Platform Simulator -->
     @if (selectedVideo()) {

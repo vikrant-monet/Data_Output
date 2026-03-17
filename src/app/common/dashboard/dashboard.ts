@@ -1,11 +1,11 @@
 import { Component, OnInit, Signal, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Header } from '../header/header';
 import { Overview } from '../../components/overview/overview';
 import { RouterLink } from "@angular/router";
 import { Api } from '../../services/api';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 interface Tab {
   id: string;
@@ -24,7 +24,7 @@ interface Video {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, ReactiveFormsModule, Header, Overview, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, Header, Overview, RouterLink , MatProgressSpinnerModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
 })
@@ -48,6 +48,7 @@ export class Dashboard implements OnInit {
   view = this.viewSignal.asReadonly();
   activePlan = signal<boolean>(true);
   dropDownData = signal<any>('');
+  loader = signal<boolean>(false);
 
   // Tabs configuration
   readonly tabs: Tab[] = [
@@ -81,6 +82,14 @@ export class Dashboard implements OnInit {
     });
   }
 
+    COLORS = [
+    '#0ea5e9', '#f43f5e', '#22c55e', '#a855f7', '#ec4899',
+    '#f97316', '#06b6d4', '#eab308', '#a855f7', '#14b8a6',
+    '#fb923c', '#c026d3', '#10b981', '#6366f1', '#84cc16'
+  ];
+  distribution = signal<any>('');
+  platform = signal<any>('');
+
   ngOnInit(): void {
     // Any initialization logic
     if(localStorage.getItem('currentPlan')){
@@ -100,9 +109,11 @@ export class Dashboard implements OnInit {
           this.videoForm.get('theme')?.enable();
       }
     })
-      this.videoForm.get('category')?.valueChanges.subscribe((res:any) => {
+      this.videoForm.get('theme')?.valueChanges.subscribe((res:any) => {
       if(res){
-          this.videoForm.get('theme')?.enable();
+        // console.log(res);
+        
+          this.videoForm.get('banner_style')?.enable();
       }
     })
 
@@ -113,7 +124,7 @@ export class Dashboard implements OnInit {
     this._api.getApi(endpoint).subscribe((res:any) => {
       if(res && !res.error){
         if(res.data){
-          console.log(res.data, 'response of the api');
+          // console.log(res.data, 'response of the api');
           let obj:any = {};
           let allData:any;
            allData = res.data.map((it:any , i:any) => {
@@ -133,13 +144,11 @@ export class Dashboard implements OnInit {
                 })
               }
             })
-            console.log(obj,'fsfsfsaf')
+            // console.log(obj,'fsfsfsaf')
             return obj
           })
           this.dropDownData.set(allData);
-          console.log(this.dropDownData(),'i am the dropdown data');
-          
-
+          // console.log(this.dropDownData(),'i am the dropdown data');
         }
       }
     })
@@ -171,7 +180,7 @@ export class Dashboard implements OnInit {
   }
 
   setShowUploadForm(show: boolean): void {
-    console.log('inside show  uploadform',show);
+    // console.log('inside show  uploadform',show);
     
     this.showUploadFormSignal.set(show);
   }
@@ -207,7 +216,7 @@ export class Dashboard implements OnInit {
     formData.append('video', file);
     formData.append('fileName', fileName);
     formData.append('duration', duration.toString());
-    console.log(fileName , duration , video);
+    // console.log(fileName , duration , video);
 
     // this.uploadVideo(formData);
     this.videoForm.get('title')?.setValue(fileName);
@@ -217,6 +226,31 @@ export class Dashboard implements OnInit {
 
   video.src = URL.createObjectURL(file);
 }
+
+submit(){
+    this.getCategoryData('/graph-count');
+}
+  getCategoryData(endpoint:string){
+    this.loader.set(true);
+    this._api.getApi(endpoint).subscribe((res:any) => {
+      this.loader.set(false);
+      if(res && res.data){
+        // console.log(res);
+        const distribution = res.data.Industry.map((it:any , i:any) => {
+          it['color'] = this.COLORS[i];
+          return it;
+        })
+        const platform = res.data.platform.map((it:any , i:any) => {
+          it['color'] = this.COLORS[i];
+          return it;
+        })
+        this.distribution.set(distribution);
+        this.platform.set(platform)
+        // console.log(this.distribution() , this.platform());
+        
+      }
+    })
+  }
 
   // Getter for Dashboard component (to be implemented)
   get DashboardComponent(): any {

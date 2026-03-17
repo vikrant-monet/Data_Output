@@ -1,0 +1,1984 @@
+<div
+    class="relative bg-white rounded-2xl shadow-lg border border-gray-100 p-6 overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+    <div
+        class="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-indigo-100/30 to-blue-100/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+    </div>
+    <div class="relative">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 mb-2">
+                <div class="bg-gradient-to-br from-indigo-500 to-blue-500 p-2 rounded-lg shadow-md"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-info w-4 h-4 text-white">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg></div>
+                <h3 class="text-gray-900 text-lg">Performance Analysis by Theme</h3>
+            </div>
+            <p class="text-gray-600 text-sm"><span class="hidden sm:inline">Duration vs Engagement • Bubble size = Views
+                    • Color = Theme</span><span class="sm:hidden">Tap bubbles for details</span></p>
+        </div>
+        <div class="mb-4 p-4 bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-xl border border-gray-200"><label
+                for="category-select" class="text-gray-700 mb-2 block text-sm">Select Category to View
+                Themes:</label><select id="category-select"
+                class="w-full sm:w-auto px-4 py-2.5 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900 shadow-sm hover:border-gray-400 transition-colors">
+                <option value="All">All Categories</option>
+                <option value="UX Testing">UX Testing</option>
+                <option value="A/B Testing">A/B Testing</option>
+                <option value="Concept Testing">Concept Testing</option>
+                <option value="Ad Testing">Ad Testing</option>
+                <option value="Movie Testing">Movie Testing</option>
+            </select>
+            <p class="text-gray-600 text-xs mt-2">Showing 10 of 10 themes across 189 videos</p>
+        </div>
+        <div class="mb-4 p-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 rounded-xl border border-gray-200">
+            <div class="flex items-center justify-between mb-3"><label class="text-gray-700 text-sm">Click themes to
+                    toggle visibility:</label><button
+                    class="text-xs sm:text-sm bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1.5 rounded-lg transition-colors">Show
+                    All</button></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(153, 27, 27);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Mobile App UX</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(6, 95, 70);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Dashboard UX</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(30, 64, 175);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Website UX</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(146, 64, 14);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">E-commerce UX</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(91, 33, 182);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Checkout/Payment Flow</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(7, 89, 133);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Navigation Flow</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(159, 18, 57);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Onboarding Flow</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(22, 101, 52);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">UI Design Review</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(154, 52, 18);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Feature Usability</span></button><button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all border bg-white hover:bg-gray-50 shadow-sm border-gray-200 hover:border-gray-300"><span
+                        class="w-3 h-3 rounded-full flex-shrink-0 shadow-sm"
+                        style="background-color: rgb(131, 24, 67);"></span><span
+                        class="text-xs sm:text-sm text-left text-gray-700">Accessibility Review</span></button></div>
+        </div>
+        <div class="h-64 sm:h-80 md:h-96">
+            <div class="recharts-responsive-container" style="width: 100%; height: 100%; min-width: 0px;">
+                <div class="recharts-wrapper"
+                    style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 384px; max-width: 774px;">
+                    <svg class="recharts-surface" width="774" height="384" viewBox="0 0 774 384"
+                        style="width: 100%; height: 100%;">
+                        <title></title>
+                        <desc></desc>
+                        <defs>
+                            <clipPath id="recharts1-clip">
+                                <rect x="80" y="20" height="314" width="674"></rect>
+                            </clipPath>
+                        </defs>
+                        <g class="recharts-cartesian-grid">
+                            <g class="recharts-cartesian-grid-horizontal">
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="334" x2="754" y2="334"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="255.5" x2="754" y2="255.5"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="177" x2="754" y2="177"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="98.5" x2="754" y2="98.5"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="20" x2="754" y2="20"></line>
+                            </g>
+                            <g class="recharts-cartesian-grid-vertical">
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="80" y1="20" x2="80" y2="334"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="248.5" y1="20" x2="248.5" y2="334"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="417" y1="20" x2="417" y2="334"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="585.5" y1="20" x2="585.5" y2="334"></line>
+                                <line stroke-dasharray="3 3" stroke="#f3f4f6" fill="none" x="80" y="20" width="674"
+                                    height="314" x1="754" y1="20" x2="754" y2="334"></line>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
+                            <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="80" y1="334" x2="754"
+                                y2="334"></line>
+                            <g class="recharts-cartesian-axis-ticks">
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="80"
+                                        y1="340" x2="80" y2="334"></line><text orientation="bottom" width="674"
+                                        height="30" name="Duration" stroke="none" x="80" y="342"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"
+                                        fill="#666">
+                                        <tspan x="80" dy="0.71em">0 min</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="248.5"
+                                        y1="340" x2="248.5" y2="334"></line><text orientation="bottom" width="674"
+                                        height="30" name="Duration" stroke="none" x="248.5" y="342"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"
+                                        fill="#666">
+                                        <tspan x="248.5" dy="0.71em">8 min</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="417"
+                                        y1="340" x2="417" y2="334"></line><text orientation="bottom" width="674"
+                                        height="30" name="Duration" stroke="none" x="417" y="342"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"
+                                        fill="#666">
+                                        <tspan x="417" dy="0.71em">16 min</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="585.5"
+                                        y1="340" x2="585.5" y2="334"></line><text orientation="bottom" width="674"
+                                        height="30" name="Duration" stroke="none" x="585.5" y="342"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"
+                                        fill="#666">
+                                        <tspan x="585.5" dy="0.71em">24 min</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="bottom" width="674" height="30" name="Duration" x="80" y="334"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="754"
+                                        y1="340" x2="754" y2="334"></line><text orientation="bottom" width="674"
+                                        height="30" name="Duration" stroke="none" x="749.828125" y="342"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"
+                                        fill="#666">
+                                        <tspan x="749.828125" dy="0.71em">32 min</tspan>
+                                    </text>
+                                </g>
+                            </g><text offset="-10" x="417" y="374" class="recharts-text recharts-label"
+                                text-anchor="middle" fill="#808080">
+                                <tspan x="417" dy="0em">Duration (minutes)</tspan>
+                            </text>
+                        </g>
+                        <g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
+                            <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                class="recharts-cartesian-axis-line" stroke="#666" fill="none" x1="80" y1="20" x2="80"
+                                y2="334"></line>
+                            <g class="recharts-cartesian-axis-ticks">
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74"
+                                        y1="334" x2="80" y2="334"></line><text orientation="left" width="60"
+                                        height="314" name="Engagement" stroke="none" x="72" y="334"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"
+                                        fill="#666">
+                                        <tspan x="72" dy="0.355em">0%</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74"
+                                        y1="255.5" x2="80" y2="255.5"></line><text orientation="left" width="60"
+                                        height="314" name="Engagement" stroke="none" x="72" y="255.5"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"
+                                        fill="#666">
+                                        <tspan x="72" dy="0.355em">25%</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74"
+                                        y1="177" x2="80" y2="177"></line><text orientation="left" width="60"
+                                        height="314" name="Engagement" stroke="none" x="72" y="177"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"
+                                        fill="#666">
+                                        <tspan x="72" dy="0.355em">50%</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74"
+                                        y1="98.5" x2="80" y2="98.5"></line><text orientation="left" width="60"
+                                        height="314" name="Engagement" stroke="none" x="72" y="98.5"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"
+                                        fill="#666">
+                                        <tspan x="72" dy="0.355em">75%</tspan>
+                                    </text>
+                                </g>
+                                <g class="recharts-layer recharts-cartesian-axis-tick">
+                                    <line orientation="left" width="60" height="314" name="Engagement" x="20" y="20"
+                                        class="recharts-cartesian-axis-tick-line" stroke="#666" fill="none" x1="74"
+                                        y1="20" x2="80" y2="20"></line><text orientation="left" width="60" height="314"
+                                        name="Engagement" stroke="none" x="72" y="20"
+                                        class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"
+                                        fill="#666">
+                                        <tspan x="72" dy="0.355em">100%</tspan>
+                                    </text>
+                                </g>
+                            </g><text offset="5" transform="rotate(-90, 25, 177)" x="25" y="177"
+                                class="recharts-text recharts-label" text-anchor="start" fill="#808080">
+                                <tspan x="25" dy="0.355em">Engagement Rate (%)</tspan>
+                            </text>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 1" fill="#991b1b" fill-opacity="0.6" width="16.38385704607619"
+                                            height="16.38385704607619" x="193.2684881436286" y="46.59927147696191"
+                                            z="15.381" id="video-1" cx="201.46041666666667" cy="54.7912" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(201.46041666666667, 54.7912)"
+                                            d="M8.192,0A8.192,8.192,0,1,1,-8.192,0A8.192,8.192,0,1,1,8.192,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 161" fill="#991b1b" fill-opacity="0.6"
+                                            width="21.600876738665146" height="21.600876738665146" x="81.48601996400077"
+                                            y="112.41136163066743" z="27.926" id="video-161" cx="92.28645833333334"
+                                            cy="123.2118" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(92.28645833333334, 123.2118)"
+                                            d="M10.8,0A10.8,10.8,0,1,1,-10.8,0A10.8,10.8,0,1,1,10.8,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 284" fill="#991b1b" fill-opacity="0.6"
+                                            width="20.44910276824351" height="20.44910276824351" x="646.8879486158781"
+                                            y="123.47484861587824" z="24.86" id="video-284" cx="657.1125" cy="133.6994"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(657.1125, 133.6994)"
+                                            d="M10.225,0A10.225,10.225,0,1,1,-10.225,0A10.225,10.225,0,1,1,10.225,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 368" fill="#991b1b" fill-opacity="0.6"
+                                            width="20.031958080315366" height="20.031958080315366"
+                                            x="310.09652095984234" y="42.82842095984229" z="23.791" id="video-368"
+                                            cx="320.1125" cy="52.84439999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(320.1125, 52.84439999999997)"
+                                            d="M10.016,0A10.016,10.016,0,1,1,-10.016,0A10.016,10.016,0,1,1,10.016,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 393" fill="#991b1b" fill-opacity="0.6"
+                                            width="12.375294255721407" height="12.375294255721407" x="553.335269538806"
+                                            y="138.31335287213926" z="8.083" id="video-393" cx="559.5229166666667"
+                                            cy="144.50099999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(559.5229166666667, 144.50099999999998)"
+                                            d="M6.188,0A6.188,6.188,0,1,1,-6.188,0A6.188,6.188,0,1,1,6.188,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 512" fill="#991b1b" fill-opacity="0.6"
+                                            width="15.920787836194082" height="15.920787836194082"
+                                            x="345.85210608190295" y="63.629806081903" z="14.434" id="video-512"
+                                            cx="353.8125" cy="71.59020000000004" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(353.8125, 71.59020000000004)"
+                                            d="M7.96,0A7.96,7.96,0,1,1,-7.96,0A7.96,7.96,0,1,1,7.96,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 513" fill="#991b1b" fill-opacity="0.6"
+                                            width="22.400019797987476" height="22.400019797987476" x="366.1322817676729"
+                                            y="45.47519010100626" z="30.152" id="video-513" cx="377.33229166666666"
+                                            cy="56.675200000000004" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(377.33229166666666, 56.675200000000004)"
+                                            d="M11.2,0A11.2,11.2,0,1,1,-11.2,0A11.2,11.2,0,1,1,11.2,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 540" fill="#991b1b" fill-opacity="0.6"
+                                            width="21.565013767392287" height="21.565013767392287"
+                                            x="387.26124311630383" y="86.02189311630384" z="27.828" id="video-540"
+                                            cx="398.04375" cy="96.80439999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(398.04375, 96.80439999999999)"
+                                            d="M10.783,0A10.783,10.783,0,1,1,-10.783,0A10.783,10.783,0,1,1,10.783,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 550" fill="#991b1b" fill-opacity="0.6"
+                                            width="19.104423189232705" height="19.104423189232705" x="644.7519550720504"
+                                            y="111.30458840538365" z="21.493" id="video-550" cx="654.3041666666667"
+                                            cy="120.8568" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(654.3041666666667, 120.8568)"
+                                            d="M9.552,0A9.552,9.552,0,1,1,-9.552,0A9.552,9.552,0,1,1,9.552,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 731" fill="#991b1b" fill-opacity="0.6"
+                                            width="12.363161990284377" height="12.363161990284377"
+                                            x="209.32050233819115" y="87.38861900485783" z="8.064" id="video-731"
+                                            cx="215.50208333333333" cy="93.57020000000001" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(215.50208333333333, 93.57020000000001)"
+                                            d="M6.182,0A6.182,6.182,0,1,1,-6.182,0A6.182,6.182,0,1,1,6.182,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 805" fill="#991b1b" fill-opacity="0.6"
+                                            width="9.69891717851709" height="9.69891717851709" x="414.9588747440748"
+                                            y="52.42234141074146" z="4.343" id="video-805" cx="419.80833333333334"
+                                            cy="57.271800000000006" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(419.80833333333334, 57.271800000000006)"
+                                            d="M4.849,0A4.849,4.849,0,1,1,-4.849,0A4.849,4.849,0,1,1,4.849,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 836" fill="#991b1b" fill-opacity="0.6"
+                                            width="20.94670478236415" height="20.94670478236415" x="290.68289760881794"
+                                            y="13.67144760881789" z="26.164" id="video-836" cx="301.15625"
+                                            cy="24.144799999999965" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(301.15625, 24.144799999999965)"
+                                            d="M10.473,0A10.473,10.473,0,1,1,-10.473,0A10.473,10.473,0,1,1,10.473,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 862" fill="#991b1b" fill-opacity="0.6"
+                                            width="19.76842097674167" height="19.76842097674167" x="464.6866228449625"
+                                            y="116.34198951162914" z="23.127" id="video-862" cx="474.5708333333334"
+                                            cy="126.22619999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(474.5708333333334, 126.22619999999998)"
+                                            d="M9.884,0A9.884,9.884,0,1,1,-9.884,0A9.884,9.884,0,1,1,9.884,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 907" fill="#991b1b" fill-opacity="0.6"
+                                            width="16.064503325527127" height="16.064503325527127" x="370.3531650039031"
+                                            y="77.59374833723646" z="14.725" id="video-907" cx="378.38541666666663"
+                                            cy="85.62600000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(378.38541666666663, 85.62600000000002)"
+                                            d="M8.032,0A8.032,8.032,0,1,1,-8.032,0A8.032,8.032,0,1,1,8.032,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 911" fill="#991b1b" fill-opacity="0.6"
+                                            width="20.196095709825908" height="20.196095709825908" x="643.1529938117537"
+                                            y="145.54995214508708" z="24.209" id="video-911" cx="653.2510416666667"
+                                            cy="155.64800000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(653.2510416666667, 155.64800000000002)"
+                                            d="M10.098,0A10.098,10.098,0,1,1,-10.098,0A10.098,10.098,0,1,1,10.098,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 969" fill="#991b1b" fill-opacity="0.6"
+                                            width="12.33758138213457" height="12.33758138213457" x="298.8489176422661"
+                                            y="49.65860930893271" z="8.024" id="video-969" cx="305.01770833333336"
+                                            cy="55.8274" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(305.01770833333336, 55.8274)"
+                                            d="M6.169,0A6.169,6.169,0,1,1,-6.169,0A6.169,6.169,0,1,1,6.169,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 4" fill="#065f46" fill-opacity="0.6" width="16.91236452252623"
+                                            height="16.91236452252623" x="386.77923440540354" y="83.57541773873687"
+                                            z="16.495" id="video-4" cx="395.23541666666665" cy="92.03159999999998"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(395.23541666666665, 92.03159999999998)"
+                                            d="M8.456,0A8.456,8.456,0,1,1,-8.456,0A8.456,8.456,0,1,1,8.456,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 9" fill="#065f46" fill-opacity="0.6" width="20.56464816877073"
+                                            height="20.56464816877073" x="597.3333009156147" y="106.96347591561462"
+                                            z="25.16" id="video-9" cx="607.615625" cy="117.24579999999999" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(607.615625, 117.24579999999999)"
+                                            d="M10.282,0A10.282,10.282,0,1,1,-10.282,0A10.282,10.282,0,1,1,10.282,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 43" fill="#065f46" fill-opacity="0.6"
+                                            width="9.905992891924802" height="9.905992891924802" x="534.9115868873708"
+                                            y="117.5680035540376" z="4.6" id="video-43" cx="539.8645833333333"
+                                            cy="122.521" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(539.8645833333333, 122.521)"
+                                            d="M4.953,0A4.953,4.953,0,1,1,-4.953,0A4.953,4.953,0,1,1,4.953,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 77" fill="#065f46" fill-opacity="0.6"
+                                            width="8.335097029248809" height="8.335097029248809" x="585.8959931520423"
+                                            y="105.1340514853756" z="2.786" id="video-77" cx="590.0635416666667"
+                                            cy="109.3016" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(590.0635416666667, 109.3016)"
+                                            d="M4.168,0A4.168,4.168,0,1,1,-4.168,0A4.168,4.168,0,1,1,4.168,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 95" fill="#065f46" fill-opacity="0.6"
+                                            width="17.871493605962435" height="17.871493605962435" x="154.2611281970188"
+                                            y="61.74385319701878" z="18.607" id="video-95" cx="163.196875" cy="70.6796"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(163.196875, 70.6796)"
+                                            d="M8.936,0A8.936,8.936,0,1,1,-8.936,0A8.936,8.936,0,1,1,8.936,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 106" fill="#065f46" fill-opacity="0.6"
+                                            width="20.801787937173746" height="20.801787937173746" x="637.9355643647465"
+                                            y="149.42330603141312" z="25.781" id="video-106" cx="648.3364583333333"
+                                            cy="159.8242" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(648.3364583333333, 159.8242)"
+                                            d="M10.401,0A10.401,10.401,0,1,1,-10.401,0A10.401,10.401,0,1,1,10.401,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 176" fill="#065f46" fill-opacity="0.6"
+                                            width="21.74809560064777" height="21.74809560064777" x="215.5103271996761"
+                                            y="34.49715219967611" z="28.33" id="video-176" cx="226.384375"
+                                            cy="45.371199999999995" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(226.384375, 45.371199999999995)"
+                                            d="M10.874,0A10.874,10.874,0,1,1,-10.874,0A10.874,10.874,0,1,1,10.874,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 204" fill="#065f46" fill-opacity="0.6"
+                                            width="11.28294431402737" height="11.28294431402737" x="235.837694509653"
+                                            y="62.6517278429863" z="6.447" id="video-204" cx="241.47916666666669"
+                                            cy="68.29319999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(241.47916666666669, 68.29319999999998)"
+                                            d="M5.641,0A5.641,5.641,0,1,1,-5.641,0A5.641,5.641,0,1,1,5.641,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 275" fill="#065f46" fill-opacity="0.6"
+                                            width="19.335780703585435" height="19.335780703585435"
+                                            x="318.16752631487395" y="34.60430964820729" z="22.056" id="video-275"
+                                            cx="327.8354166666667" cy="44.27220000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(327.8354166666667, 44.27220000000001)"
+                                            d="M9.668,0A9.668,9.668,0,1,1,-9.668,0A9.668,9.668,0,1,1,9.668,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 277" fill="#065f46" fill-opacity="0.6"
+                                            width="19.006188851865357" height="19.006188851865357" x="517.372947240734"
+                                            y="103.59790557406735" z="21.256" id="video-277" cx="526.8760416666667"
+                                            cy="113.10100000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(526.8760416666667, 113.10100000000003)"
+                                            d="M9.503,0A9.503,9.503,0,1,1,-9.503,0A9.503,9.503,0,1,1,9.503,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 282" fill="#065f46" fill-opacity="0.6"
+                                            width="9.925110135267817" height="9.925110135267817" x="141.73536159903276"
+                                            y="72.49944493236606" z="4.624" id="video-282" cx="146.69791666666666"
+                                            cy="77.46199999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(146.69791666666666, 77.46199999999997)"
+                                            d="M4.963,0A4.963,4.963,0,1,1,-4.963,0A4.963,4.963,0,1,1,4.963,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 286" fill="#065f46" fill-opacity="0.6"
+                                            width="8.101561131096163" height="8.101561131096163" x="221.98255276778525"
+                                            y="84.1500194344519" z="2.543" id="video-286" cx="226.03333333333333"
+                                            cy="88.20079999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(226.03333333333333, 88.20079999999999)"
+                                            d="M4.051,0A4.051,4.051,0,1,1,-4.051,0A4.051,4.051,0,1,1,4.051,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 344" fill="#065f46" fill-opacity="0.6"
+                                            width="17.128147788814537" height="17.128147788814537" x="520.769259438926"
+                                            y="76.0257261055927" z="16.96" id="video-344" cx="529.3333333333333"
+                                            cy="84.58979999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(529.3333333333333, 84.58979999999997)"
+                                            d="M8.564,0A8.564,8.564,0,1,1,-8.564,0A8.564,8.564,0,1,1,8.564,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 367" fill="#065f46" fill-opacity="0.6"
+                                            width="14.901947573231203" height="14.901947573231203" x="311.6084012133844"
+                                            y="29.819026213384408" z="12.446" id="video-367" cx="319.059375"
+                                            cy="37.27000000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(319.059375, 37.27000000000001)"
+                                            d="M7.451,0A7.451,7.451,0,1,1,-7.451,0A7.451,7.451,0,1,1,7.451,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 503" fill="#065f46" fill-opacity="0.6"
+                                            width="8.581615158735351" height="8.581615158735351" x="634.216484087299"
+                                            y="134.1813924206323" z="3.05" id="video-503" cx="638.5072916666667"
+                                            cy="138.4722" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(638.5072916666667, 138.4722)"
+                                            d="M4.291,0A4.291,4.291,0,1,1,-4.291,0A4.291,4.291,0,1,1,4.291,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 547" fill="#065f46" fill-opacity="0.6"
+                                            width="14.603745768023341" height="14.603745768023341" x="675.7877104493216"
+                                            y="157.51492711598834" z="11.889" id="video-547" cx="683.0895833333333"
+                                            cy="164.8168" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(683.0895833333333, 164.8168)"
+                                            d="M7.302,0A7.302,7.302,0,1,1,-7.302,0A7.302,7.302,0,1,1,7.302,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 602" fill="#065f46" fill-opacity="0.6"
+                                            width="22.048182488111483" height="22.048182488111483"
+                                            x="406.67799208927767" y="71.46190875594428" z="29.162" id="video-602"
+                                            cx="417.7020833333334" cy="82.48600000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(417.7020833333334, 82.48600000000002)"
+                                            d="M11.024,0A11.024,11.024,0,1,1,-11.024,0A11.024,11.024,0,1,1,11.024,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 639" fill="#065f46" fill-opacity="0.6"
+                                            width="20.73218805897899" height="20.73218805897899" x="574.4318226371771"
+                                            y="138.02850597051054" z="25.598" id="video-639" cx="584.7979166666667"
+                                            cy="148.39460000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(584.7979166666667, 148.39460000000003)"
+                                            d="M10.366,0A10.366,10.366,0,1,1,-10.366,0A10.366,10.366,0,1,1,10.366,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 654" fill="#065f46" fill-opacity="0.6"
+                                            width="18.917884566608166" height="18.917884566608166" x="228.8608493833626"
+                                            y="86.27785771669595" z="21.044" id="video-654" cx="238.31979166666667"
+                                            cy="95.73680000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(238.31979166666667, 95.73680000000003)"
+                                            d="M9.459,0A9.459,9.459,0,1,1,-9.459,0A9.459,9.459,0,1,1,9.459,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 656" fill="#065f46" fill-opacity="0.6"
+                                            width="10.220718763765252" height="10.220718763765252"
+                                            x="468.05630728478405" y="69.18024061811738" z="5.001" id="video-656"
+                                            cx="473.1666666666667" cy="74.29060000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(473.1666666666667, 74.29060000000001)"
+                                            d="M5.11,0A5.11,5.11,0,1,1,-5.11,0A5.11,5.11,0,1,1,5.11,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 698" fill="#065f46" fill-opacity="0.6"
+                                            width="20.145583468850383" height="20.145583468850383" x="325.8365832655748"
+                                            y="77.53140826557483" z="24.08" id="video-698" cx="335.909375"
+                                            cy="87.60420000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(335.909375, 87.60420000000002)"
+                                            d="M10.073,0A10.073,10.073,0,1,1,-10.073,0A10.073,10.073,0,1,1,10.073,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 734" fill="#065f46" fill-opacity="0.6"
+                                            width="19.33373820326774" height="19.33373820326774" x="110.35188089836613"
+                                            y="56.02013089836611" z="22.051" id="video-734" cx="120.01875"
+                                            cy="65.68699999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(120.01875, 65.68699999999998)"
+                                            d="M9.667,0A9.667,9.667,0,1,1,-9.667,0A9.667,9.667,0,1,1,9.667,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 859" fill="#065f46" fill-opacity="0.6"
+                                            width="15.579283301598165" height="15.579283301598165" x="661.6093166825342"
+                                            y="124.11995834920093" z="13.753" id="video-859" cx="669.3989583333333"
+                                            cy="131.9096" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(669.3989583333333, 131.9096)"
+                                            d="M7.79,0A7.79,7.79,0,1,1,-7.79,0A7.79,7.79,0,1,1,7.79,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 912" fill="#065f46" fill-opacity="0.6"
+                                            width="20.516583333708773" height="20.516583333708773" x="402.5292083331456"
+                                            y="46.69950833314559" z="25.035" id="video-912" cx="412.7875"
+                                            cy="56.95779999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(412.7875, 56.95779999999997)"
+                                            d="M10.258,0A10.258,10.258,0,1,1,-10.258,0A10.258,10.258,0,1,1,10.258,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 972" fill="#065f46" fill-opacity="0.6"
+                                            width="21.20416556666991" height="21.20416556666991" x="488.541667216665"
+                                            y="64.72471721666506" z="26.851" id="video-972" cx="499.14374999999995"
+                                            cy="75.3268" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(499.14374999999995, 75.3268)"
+                                            d="M10.602,0A10.602,10.602,0,1,1,-10.602,0A10.602,10.602,0,1,1,10.602,0">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 19" fill="#1e40af" fill-opacity="0.6"
+                                            width="19.729627652934166" height="19.729627652934166"
+                                            x="433.81435284019955" y="107.00418617353291" z="23.03" id="video-19"
+                                            cx="443.6791666666666" cy="116.869" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(443.6791666666666, 116.869)"
+                                            d="M9.865,0A9.865,9.865,0,1,1,-9.865,0A9.865,9.865,0,1,1,9.865,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 55" fill="#1e40af" fill-opacity="0.6"
+                                            width="8.404926148149494" height="8.404926148149494" x="537.0662869259252"
+                                            y="139.16813692592524" z="2.86" id="video-55" cx="541.26875" cy="143.3706"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(541.26875, 143.3706)"
+                                            d="M4.202,0A4.202,4.202,0,1,1,-4.202,0A4.202,4.202,0,1,1,4.202,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 97" fill="#1e40af" fill-opacity="0.6"
+                                            width="11.14843938476246" height="11.14843938476246" x="682.4299469742855"
+                                            y="175.06818030761875" z="6.256" id="video-97" cx="688.0041666666667"
+                                            cy="180.64239999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(688.0041666666667, 180.64239999999998)"
+                                            d="M5.574,0A5.574,5.574,0,1,1,-5.574,0A5.574,5.574,0,1,1,5.574,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 115" fill="#1e40af" fill-opacity="0.6"
+                                            width="21.201930534108612" height="21.201930534108612" x="625.4490347329456"
+                                            y="144.13643473294567" z="26.845" id="video-115" cx="636.05"
+                                            cy="154.73739999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(636.05, 154.73739999999998)"
+                                            d="M10.601,0A10.601,10.601,0,1,1,-10.601,0A10.601,10.601,0,1,1,10.601,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 139" fill="#1e40af" fill-opacity="0.6"
+                                            width="21.979295321970984" height="21.979295321970984" x="122.7197273390145"
+                                            y="88.10695233901451" z="28.97" id="video-139" cx="133.709375"
+                                            cy="99.09660000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(133.709375, 99.09660000000001)"
+                                            d="M10.99,0A10.99,10.99,0,1,1,-10.99,0A10.99,10.99,0,1,1,10.99,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 207" fill="#1e40af" fill-opacity="0.6"
+                                            width="11.015160236770273" height="11.015160236770273" x="608.4267948816149"
+                                            y="122.94801988161487" z="6.069" id="video-207" cx="613.934375"
+                                            cy="128.4556" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(613.934375, 128.4556)"
+                                            d="M5.508,0A5.508,5.508,0,1,1,-5.508,0A5.508,5.508,0,1,1,5.508,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 288" fill="#1e40af" fill-opacity="0.6"
+                                            width="19.38555102468496" height="19.38555102468496" x="565.9780578209909"
+                                            y="134.21162448765756" z="22.178" id="video-288" cx="575.6708333333333"
+                                            cy="143.90440000000004" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(575.6708333333333, 143.90440000000004)"
+                                            d="M9.693,0A9.693,9.693,0,1,1,-9.693,0A9.693,9.693,0,1,1,9.693,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 378" fill="#1e40af" fill-opacity="0.6"
+                                            width="21.856774980176187" height="21.856774980176187" x="287.4195291765786"
+                                            y="44.86761250991194" z="28.63" id="video-378" cx="298.34791666666666"
+                                            cy="55.796000000000035" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(298.34791666666666, 55.796000000000035)"
+                                            d="M10.928,0A10.928,10.928,0,1,1,-10.928,0A10.928,10.928,0,1,1,10.928,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 455" fill="#1e40af" fill-opacity="0.6"
+                                            width="13.978681908702915" height="13.978681908702915" x="507.6002423789818"
+                                            y="118.01225904564855" z="10.758" id="video-455" cx="514.5895833333333"
+                                            cy="125.00160000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(514.5895833333333, 125.00160000000001)"
+                                            d="M6.989,0A6.989,6.989,0,1,1,-6.989,0A6.989,6.989,0,1,1,6.989,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 484" fill="#1e40af" fill-opacity="0.6"
+                                            width="11.43867337595876" height="11.43867337595876" x="204.8681633120206"
+                                            y="85.40166331202063" z="6.671" id="video-484" cx="210.5875"
+                                            cy="91.12100000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(210.5875, 91.12100000000001)"
+                                            d="M5.719,0A5.719,5.719,0,1,1,-5.719,0A5.719,5.719,0,1,1,5.719,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 516" fill="#1e40af" fill-opacity="0.6"
+                                            width="19.764824800774374" height="19.764824800774374" x="187.0144625996128"
+                                            y="79.0719875996128" z="23.118" id="video-516" cx="196.896875"
+                                            cy="88.95439999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(196.896875, 88.95439999999998)"
+                                            d="M9.882,0A9.882,9.882,0,1,1,-9.882,0A9.882,9.882,0,1,1,9.882,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 561" fill="#1e40af" fill-opacity="0.6"
+                                            width="20.976848221645565" height="20.976848221645565" x="585.8938675558439"
+                                            y="111.62437588917722" z="26.244" id="video-561" cx="596.3822916666667"
+                                            cy="122.1128" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(596.3822916666667, 122.1128)"
+                                            d="M10.488,0A10.488,10.488,0,1,1,-10.488,0A10.488,10.488,0,1,1,10.488,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 598" fill="#1e40af" fill-opacity="0.6"
+                                            width="18.65342749711821" height="18.65342749711821" x="688.1555779181076"
+                                            y="169.5258862514409" z="20.415" id="video-598" cx="697.4822916666667"
+                                            cy="178.85260000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(697.4822916666667, 178.85260000000002)"
+                                            d="M9.327,0A9.327,9.327,0,1,1,-9.327,0A9.327,9.327,0,1,1,9.327,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 630" fill="#1e40af" fill-opacity="0.6"
+                                            width="21.320805300713136" height="21.320805300713136" x="317.5260556829768"
+                                            y="77.44619734964343" z="27.165" id="video-630" cx="328.18645833333335"
+                                            cy="88.1066" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(328.18645833333335, 88.1066)"
+                                            d="M10.66,0A10.66,10.66,0,1,1,-10.66,0A10.66,10.66,0,1,1,10.66,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 632" fill="#1e40af" fill-opacity="0.6"
+                                            width="17.02686151267166" height="17.02686151267166" x="325.6407359103308"
+                                            y="83.48676924366418" z="16.741" id="video-632" cx="334.15416666666664"
+                                            cy="92.00020000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(334.15416666666664, 92.00020000000002)"
+                                            d="M8.513,0A8.513,8.513,0,1,1,-8.513,0A8.513,8.513,0,1,1,8.513,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 676" fill="#1e40af" fill-opacity="0.6"
+                                            width="14.305401111084688" height="14.305401111084688"
+                                            x="468.12021611112425" y="90.90769944445768" z="11.343" id="video-676"
+                                            cx="475.2729166666666" cy="98.06040000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(475.2729166666666, 98.06040000000002)"
+                                            d="M7.153,0A7.153,7.153,0,1,1,-7.153,0A7.153,7.153,0,1,1,7.153,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 768" fill="#1e40af" fill-opacity="0.6"
+                                            width="20.867749580274555" height="20.867749580274555" x="652.6463335431961"
+                                            y="164.61932520986272" z="25.955" id="video-768" cx="663.0802083333333"
+                                            cy="175.0532" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(663.0802083333333, 175.0532)"
+                                            d="M10.434,0A10.434,10.434,0,1,1,-10.434,0A10.434,10.434,0,1,1,10.434,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 1000" fill="#1e40af" fill-opacity="0.6"
+                                            width="19.484304921058083" height="19.484304921058083" x="364.4307642061376"
+                                            y="66.87204753947097" z="22.421" id="video-1000" cx="374.17291666666665"
+                                            cy="76.61420000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(374.17291666666665, 76.61420000000001)"
+                                            d="M9.742,0A9.742,9.742,0,1,1,-9.742,0A9.742,9.742,0,1,1,9.742,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 20" fill="#92400e" fill-opacity="0.6"
+                                            width="19.264164340928847" height="19.264164340928847"
+                                            x="463.88562616286896" y="114.86711782953557" z="21.881" id="video-20"
+                                            cx="473.51770833333336" cy="124.4992" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(473.51770833333336, 124.4992)"
+                                            d="M9.632,0A9.632,9.632,0,1,1,-9.632,0A9.632,9.632,0,1,1,9.632,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 54" fill="#92400e" fill-opacity="0.6"
+                                            width="9.900410075767134" height="9.900410075767134" x="697.4466699621164"
+                                            y="127.52459496211642" z="4.593" id="video-54" cx="702.396875" cy="132.4748"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(702.396875, 132.4748)"
+                                            d="M4.95,0A4.95,4.95,0,1,1,-4.95,0A4.95,4.95,0,1,1,4.95,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 83" fill="#92400e" fill-opacity="0.6"
+                                            width="17.182014936681245" height="17.182014936681245" x="593.4079508649927"
+                                            y="102.02939253165937" z="17.077" id="video-83" cx="601.9989583333333"
+                                            cy="110.62039999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(601.9989583333333, 110.62039999999999)"
+                                            d="M8.591,0A8.591,8.591,0,1,1,-8.591,0A8.591,8.591,0,1,1,8.591,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 87" fill="#92400e" fill-opacity="0.6"
+                                            width="18.894071978334225" height="18.894071978334225" x="268.5404640108329"
+                                            y="27.508964010832905" z="20.987" id="video-87" cx="277.9875"
+                                            cy="36.95600000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(277.9875, 36.95600000000002)"
+                                            d="M9.447,0A9.447,9.447,0,1,1,-9.447,0A9.447,9.447,0,1,1,9.447,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 123" fill="#92400e" fill-opacity="0.6"
+                                            width="21.354489463707395" height="21.354489463707395" x="469.5102552681463"
+                                            y="109.1747552681463" z="27.256" id="video-123" cx="480.1875"
+                                            cy="119.85199999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(480.1875, 119.85199999999999)"
+                                            d="M10.677,0A10.677,10.677,0,1,1,-10.677,0A10.677,10.677,0,1,1,10.677,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 132" fill="#92400e" fill-opacity="0.6"
+                                            width="22.56758334191025" height="22.56758334191025" x="393.4297499957115"
+                                            y="56.78960832904488" z="30.629" id="video-132" cx="404.71354166666663"
+                                            cy="68.0734" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(404.71354166666663, 68.0734)"
+                                            d="M11.284,0A11.284,11.284,0,1,1,-11.284,0A11.284,11.284,0,1,1,11.284,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 135" fill="#92400e" fill-opacity="0.6"
+                                            width="21.219431988554717" height="21.219431988554717" x="682.3090340057227"
+                                            y="168.77668400572267" z="26.892" id="video-135" cx="692.91875"
+                                            cy="179.38640000000004" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(692.91875, 179.38640000000004)"
+                                            d="M10.61,0A10.61,10.61,0,1,1,-10.61,0A10.61,10.61,0,1,1,10.61,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 155" fill="#92400e" fill-opacity="0.6"
+                                            width="19.947403172653615" height="19.947403172653615" x="423.8762984136732"
+                                            y="91.6976984136732" z="23.577" id="video-155" cx="433.85" cy="101.6714"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(433.85, 101.6714)"
+                                            d="M9.974,0A9.974,9.974,0,1,1,-9.974,0A9.974,9.974,0,1,1,9.974,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 173" fill="#92400e" fill-opacity="0.6"
+                                            width="21.37408325063101" height="21.37408325063101" x="559.7181667080179"
+                                            y="105.7737583746845" z="27.309" id="video-173" cx="570.4052083333333"
+                                            cy="116.4608" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(570.4052083333333, 116.4608)"
+                                            d="M10.687,0A10.687,10.687,0,1,1,-10.687,0A10.687,10.687,0,1,1,10.687,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 187" fill="#92400e" fill-opacity="0.6"
+                                            width="20.15107154256181" height="20.15107154256181" x="528.7359225620525"
+                                            y="91.78426422871908" z="24.094" id="video-187" cx="538.8114583333333"
+                                            cy="101.85979999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(538.8114583333333, 101.85979999999998)"
+                                            d="M10.076,0A10.076,10.076,0,1,1,-10.076,0A10.076,10.076,0,1,1,10.076,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 199" fill="#92400e" fill-opacity="0.6"
+                                            width="20.830245292673162" height="20.830245292673162" x="578.2442523536633"
+                                            y="118.5742773536634" z="25.856" id="video-199" cx="588.659375"
+                                            cy="128.9894" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(588.659375, 128.9894)"
+                                            d="M10.415,0A10.415,10.415,0,1,1,-10.415,0A10.415,10.415,0,1,1,10.415,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 212" fill="#92400e" fill-opacity="0.6"
+                                            width="8.510451701348773" height="8.510451701348773" x="670.0583158159923"
+                                            y="172.27377414932565" z="2.973" id="video-212" cx="674.3135416666667"
+                                            cy="176.52900000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(674.3135416666667, 176.52900000000002)"
+                                            d="M4.255,0A4.255,4.255,0,1,1,-4.255,0A4.255,4.255,0,1,1,4.255,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 314" fill="#92400e" fill-opacity="0.6"
+                                            width="20.647057950356423" height="20.647057950356423"
+                                            x="144.44834602482177" y="47.04247102482182" z="25.375" id="video-314"
+                                            cx="154.771875" cy="57.366000000000035" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(154.771875, 57.366000000000035)"
+                                            d="M10.324,0A10.324,10.324,0,1,1,-10.324,0A10.324,10.324,0,1,1,10.324,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 410" fill="#92400e" fill-opacity="0.6"
+                                            width="18.152571189899998" height="18.152571189899998"
+                                            x="183.95913107171666" y="46.53131440505002" z="19.248" id="video-410"
+                                            cx="193.03541666666666" cy="55.60760000000002" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(193.03541666666666, 55.60760000000002)"
+                                            d="M9.076,0A9.076,9.076,0,1,1,-9.076,0A9.076,9.076,0,1,1,9.076,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 446" fill="#92400e" fill-opacity="0.6"
+                                            width="17.20176987476427" height="17.20176987476427" x="584.2709900626179"
+                                            y="141.08111506261784" z="17.12" id="video-446" cx="592.871875" cy="149.682"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(592.871875, 149.682)"
+                                            d="M8.601,0A8.601,8.601,0,1,1,-8.601,0A8.601,8.601,0,1,1,8.601,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 451" fill="#92400e" fill-opacity="0.6"
+                                            width="13.621546583412803" height="13.621546583412803"
+                                            x="299.96214337496025" y="68.83002670829362" z="10.134" id="video-451"
+                                            cx="306.7729166666667" cy="75.64080000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(306.7729166666667, 75.64080000000001)"
+                                            d="M6.811,0A6.811,6.811,0,1,1,-6.811,0A6.811,6.811,0,1,1,6.811,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 587" fill="#92400e" fill-opacity="0.6"
+                                            width="10.434093914067681" height="10.434093914067681" x="517.4464947096328"
+                                            y="89.04395304296617" z="5.28" id="video-587" cx="522.6635416666667"
+                                            cy="94.26100000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(522.6635416666667, 94.26100000000001)"
+                                            d="M5.217,0A5.217,5.217,0,1,1,-5.217,0A5.217,5.217,0,1,1,5.217,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 620" fill="#92400e" fill-opacity="0.6"
+                                            width="21.769874880456776" height="21.769874880456776" x="669.7473542264382"
+                                            y="137.47826255977162" z="28.39" id="video-620" cx="680.6322916666667"
+                                            cy="148.3632" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(680.6322916666667, 148.3632)"
+                                            d="M10.885,0A10.885,10.885,0,1,1,-10.885,0A10.885,10.885,0,1,1,10.885,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 631" fill="#92400e" fill-opacity="0.6"
+                                            width="13.718037285977664" height="13.718037285977664" x="610.2347313570111"
+                                            y="102.09718135701117" z="10.301" id="video-631" cx="617.09375"
+                                            cy="108.9562" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(617.09375, 108.9562)"
+                                            d="M6.859,0A6.859,6.859,0,1,1,-6.859,0A6.859,6.859,0,1,1,6.859,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 799" fill="#92400e" fill-opacity="0.6"
+                                            width="11.635155536945462" height="11.635155536945462"
+                                            x="154.21992223152728" y="87.43862223152726" z="6.958" id="video-799"
+                                            cx="160.0375" cy="93.25619999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(160.0375, 93.25619999999999)"
+                                            d="M5.818,0A5.818,5.818,0,1,1,-5.818,0A5.818,5.818,0,1,1,5.818,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 819" fill="#92400e" fill-opacity="0.6"
+                                            width="21.592465268181034" height="21.592465268181034"
+                                            x="313.17772569924284" y="66.06916736590951" z="27.903" id="video-819"
+                                            cx="323.97395833333337" cy="76.86540000000002" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(323.97395833333337, 76.86540000000002)"
+                                            d="M10.796,0A10.796,10.796,0,1,1,-10.796,0A10.796,10.796,0,1,1,10.796,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 901" fill="#92400e" fill-opacity="0.6"
+                                            width="14.646409595206832" height="14.646409595206832"
+                                            x="129.89658686906324" y="89.7951952023966" z="11.968" id="video-901"
+                                            cx="137.21979166666665" cy="97.11840000000001" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(137.21979166666665, 97.11840000000001)"
+                                            d="M7.323,0A7.323,7.323,0,1,1,-7.323,0A7.323,7.323,0,1,1,7.323,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 30" fill="#5b21b6" fill-opacity="0.6"
+                                            width="20.124401165007928" height="20.124401165007928" x="80.82009108416271"
+                                            y="85.07799941749606" z="24.026" id="video-30" cx="90.88229166666667"
+                                            cy="95.14020000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(90.88229166666667, 95.14020000000002)"
+                                            d="M10.062,0A10.062,10.062,0,1,1,-10.062,0A10.062,10.062,0,1,1,10.062,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 230" fill="#5b21b6" fill-opacity="0.6"
+                                            width="11.51437639232883" height="11.51437639232883" x="397.5521868038356"
+                                            y="56.664211803835585" z="6.781" id="video-230" cx="403.309375" cy="62.4214"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(403.309375, 62.4214)"
+                                            d="M5.757,0A5.757,5.757,0,1,1,-5.757,0A5.757,5.757,0,1,1,5.757,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 259" fill="#5b21b6" fill-opacity="0.6"
+                                            width="6.466387659098361" height="6.466387659098361" x="169.09076450378416"
+                                            y="102.61440617045085" z="1.035" id="video-259" cx="172.32395833333334"
+                                            cy="105.84760000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(172.32395833333334, 105.84760000000003)"
+                                            d="M3.233,0A3.233,3.233,0,1,1,-3.233,0A3.233,3.233,0,1,1,3.233,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 345" fill="#5b21b6" fill-opacity="0.6"
+                                            width="18.330526525084064" height="18.330526525084064" x="526.1357784041247"
+                                            y="103.30773673745797" z="19.659" id="video-345" cx="535.3010416666667"
+                                            cy="112.473" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(535.3010416666667, 112.473)"
+                                            d="M9.165,0A9.165,9.165,0,1,1,-9.165,0A9.165,9.165,0,1,1,9.165,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 481" fill="#5b21b6" fill-opacity="0.6"
+                                            width="17.566151558340387" height="17.566151558340387"
+                                            x="272.36379922082983" y="31.030324220829822" z="17.922" id="video-481"
+                                            cx="281.146875" cy="39.813400000000016" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(281.146875, 39.813400000000016)"
+                                            d="M8.783,0A8.783,8.783,0,1,1,-8.783,0A8.783,8.783,0,1,1,8.783,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 483" fill="#5b21b6" fill-opacity="0.6"
+                                            width="8.090830071794425" height="8.090830071794425" x="93.15562663076946"
+                                            y="68.1413849641028" z="2.532" id="video-483" cx="97.20104166666667"
+                                            cy="72.1868" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(97.20104166666667, 72.1868)"
+                                            d="M4.045,0A4.045,4.045,0,1,1,-4.045,0A4.045,4.045,0,1,1,4.045,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 510" fill="#5b21b6" fill-opacity="0.6"
+                                            width="21.093621621317922" height="21.093621621317922" x="472.800064189341"
+                                            y="104.34398918934104" z="26.555" id="video-510" cx="483.34687499999995"
+                                            cy="114.89080000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(483.34687499999995, 114.89080000000001)"
+                                            d="M10.547,0A10.547,10.547,0,1,1,-10.547,0A10.547,10.547,0,1,1,10.547,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 541" fill="#5b21b6" fill-opacity="0.6"
+                                            width="12.566560834082376" height="12.566560834082376"
+                                            x="129.18130291629214" y="101.7937195829588" z="8.385" id="video-541"
+                                            cx="135.46458333333334" cy="108.07699999999998" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(135.46458333333334, 108.07699999999998)"
+                                            d="M6.283,0A6.283,6.283,0,1,1,-6.283,0A6.283,6.283,0,1,1,6.283,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 565" fill="#5b21b6" fill-opacity="0.6"
+                                            width="9.489819977185794" height="9.489819977185794" x="391.5436316780738"
+                                            y="65.2438900114071" z="4.089" id="video-565" cx="396.2885416666667"
+                                            cy="69.9888" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(396.2885416666667, 69.9888)"
+                                            d="M4.745,0A4.745,4.745,0,1,1,-4.745,0A4.745,4.745,0,1,1,4.745,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 597" fill="#5b21b6" fill-opacity="0.6"
+                                            width="22.17463218090555" height="22.17463218090555" x="629.8772672428805"
+                                            y="151.50008390954721" z="29.516" id="video-597" cx="640.9645833333333"
+                                            cy="162.5874" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(640.9645833333333, 162.5874)"
+                                            d="M11.087,0A11.087,11.087,0,1,1,-11.087,0A11.087,11.087,0,1,1,11.087,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 611" fill="#5b21b6" fill-opacity="0.6"
+                                            width="18.007537380093687" height="18.007537380093687" x="417.1233146432865"
+                                            y="59.94883130995318" z="18.916" id="video-611" cx="426.12708333333336"
+                                            cy="68.95260000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(426.12708333333336, 68.95260000000002)"
+                                            d="M9.004,0A9.004,9.004,0,1,1,-9.004,0A9.004,9.004,0,1,1,9.004,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 691" fill="#5b21b6" fill-opacity="0.6"
+                                            width="6.770692512218333" height="6.770692512218333" x="221.94590374389085"
+                                            y="73.5428537438908" z="1.29" id="video-691" cx="225.33125"
+                                            cy="76.92819999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(225.33125, 76.92819999999998)"
+                                            d="M3.385,0A3.385,3.385,0,1,1,-3.385,0A3.385,3.385,0,1,1,3.385,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 760" fill="#5b21b6" fill-opacity="0.6"
+                                            width="13.361619846072418" height="13.361619846072418"
+                                            x="246.38273174363044" y="50.528190076963774" z="9.69" id="video-760"
+                                            cx="253.06354166666665" cy="57.20899999999998" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(253.06354166666665, 57.20899999999998)"
+                                            d="M6.681,0A6.681,6.681,0,1,1,-6.681,0A6.681,6.681,0,1,1,6.681,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 787" fill="#5b21b6" fill-opacity="0.6"
+                                            width="20.259351299367527" height="20.259351299367527" x="430.7411576836496"
+                                            y="71.57132435031623" z="24.371" id="video-787" cx="440.87083333333334"
+                                            cy="81.701" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(440.87083333333334, 81.701)"
+                                            d="M10.13,0A10.13,10.13,0,1,1,-10.13,0A10.13,10.13,0,1,1,10.13,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 800" fill="#5b21b6" fill-opacity="0.6"
+                                            width="21.548892610686014" height="21.548892610686014" x="597.8943036946571"
+                                            y="139.09595369465697" z="27.784" id="video-800" cx="608.66875"
+                                            cy="149.8704" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(608.66875, 149.8704)"
+                                            d="M10.774,0A10.774,10.774,0,1,1,-10.774,0A10.774,10.774,0,1,1,10.774,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 856" fill="#5b21b6" fill-opacity="0.6"
+                                            width="19.762826642478387" height="19.762826642478387"
+                                            x="228.78942001209415" y="60.5155866787608" z="23.113" id="video-856"
+                                            cx="238.67083333333335" cy="70.39699999999999" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(238.67083333333335, 70.39699999999999)"
+                                            d="M9.881,0A9.881,9.881,0,1,1,-9.881,0A9.881,9.881,0,1,1,9.881,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 897" fill="#5b21b6" fill-opacity="0.6"
+                                            width="15.169326301749214" height="15.169326301749214" x="553.3424201824587"
+                                            y="132.17493684912537" z="12.955" id="video-897" cx="560.9270833333333"
+                                            cy="139.75959999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(560.9270833333333, 139.75959999999998)"
+                                            d="M7.585,0A7.585,7.585,0,1,1,-7.585,0A7.585,7.585,0,1,1,7.585,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 930" fill="#5b21b6" fill-opacity="0.6"
+                                            width="8.931582227895497" height="8.931582227895497" x="145.39150055271892"
+                                            y="74.56620888605224" z="3.438" id="video-930" cx="149.85729166666667"
+                                            cy="79.03199999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(149.85729166666667, 79.03199999999998)"
+                                            d="M4.466,0A4.466,4.466,0,1,1,-4.466,0A4.466,4.466,0,1,1,4.466,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 40" fill="#075985" fill-opacity="0.6"
+                                            width="17.136446063645195" height="17.136446063645195"
+                                            x="236.07031863484406" y="28.984376968177422" z="16.978" id="video-40"
+                                            cx="244.63854166666667" cy="37.55260000000002" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(244.63854166666667, 37.55260000000002)"
+                                            d="M8.568,0A8.568,8.568,0,1,1,-8.568,0A8.568,8.568,0,1,1,8.568,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 150" fill="#075985" fill-opacity="0.6"
+                                            width="7.644088456879204" height="7.644088456879204" x="497.0769141048938"
+                                            y="112.9841557715604" z="2.087" id="video-150" cx="500.8989583333334"
+                                            cy="116.8062" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(500.8989583333334, 116.8062)"
+                                            d="M3.822,0A3.822,3.822,0,1,1,-3.822,0A3.822,3.822,0,1,1,3.822,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 157" fill="#075985" fill-opacity="0.6"
+                                            width="21.01333914217848" height="21.01333914217848" x="379.46312209557743"
+                                            y="75.49613042891076" z="26.341" id="video-157" cx="389.96979166666665"
+                                            cy="86.0028" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(389.96979166666665, 86.0028)"
+                                            d="M10.507,0A10.507,10.507,0,1,1,-10.507,0A10.507,10.507,0,1,1,10.507,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 232" fill="#075985" fill-opacity="0.6"
+                                            width="21.8676132113674" height="21.8676132113674" x="639.157860060983"
+                                            y="129.51659339431626" z="28.66" id="video-232" cx="650.0916666666667"
+                                            cy="140.45039999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(650.0916666666667, 140.45039999999997)"
+                                            d="M10.934,0A10.934,10.934,0,1,1,-10.934,0A10.934,10.934,0,1,1,10.934,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 238" fill="#075985" fill-opacity="0.6"
+                                            width="21.65601873658928" height="21.65601873658928" x="419.8626156317053"
+                                            y="94.54859063170537" z="28.077" id="video-238" cx="430.69062499999995"
+                                            cy="105.37660000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(430.69062499999995, 105.37660000000001)"
+                                            d="M10.828,0A10.828,10.828,0,1,1,-10.828,0A10.828,10.828,0,1,1,10.828,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 260" fill="#075985" fill-opacity="0.6"
+                                            width="12.261807666530988" height="12.261807666530988"
+                                            x="243.07117950006784" y="32.583496166734506" z="7.906" id="video-260"
+                                            cx="249.20208333333335" cy="38.7144" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(249.20208333333335, 38.7144)"
+                                            d="M6.131,0A6.131,6.131,0,1,1,-6.131,0A6.131,6.131,0,1,1,6.131,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 335" fill="#075985" fill-opacity="0.6"
+                                            width="14.816369488694782" height="14.816369488694782" x="359.7438985889859"
+                                            y="89.89861525565263" z="12.285" id="video-335" cx="367.15208333333334"
+                                            cy="97.30680000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(367.15208333333334, 97.30680000000002)"
+                                            d="M7.408,0A7.408,7.408,0,1,1,-7.408,0A7.408,7.408,0,1,1,7.408,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 437" fill="#075985" fill-opacity="0.6"
+                                            width="21.522119509447805" height="21.522119509447805"
+                                            x="366.57123191194273" y="59.13354024527611" z="27.711" id="video-437"
+                                            cx="377.33229166666666" cy="69.89460000000001" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(377.33229166666666, 69.89460000000001)"
+                                            d="M10.761,0A10.761,10.761,0,1,1,-10.761,0A10.761,10.761,0,1,1,10.761,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 463" fill="#075985" fill-opacity="0.6"
+                                            width="9.202492753761604" height="9.202492753761604" x="401.16542028978586"
+                                            y="89.97375362311922" z="3.749" id="video-463" cx="405.76666666666665"
+                                            cy="94.57500000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(405.76666666666665, 94.57500000000002)"
+                                            d="M4.601,0A4.601,4.601,0,1,1,-4.601,0A4.601,4.601,0,1,1,4.601,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 575" fill="#075985" fill-opacity="0.6"
+                                            width="17.782440412410548" height="17.782440412410548"
+                                            x="138.85982146046138" y="56.10497979379471" z="18.406" id="video-575"
+                                            cx="147.75104166666665" cy="64.99619999999999" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(147.75104166666665, 64.99619999999999)"
+                                            d="M8.891,0A8.891,8.891,0,1,1,-8.891,0A8.891,8.891,0,1,1,8.891,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 697" fill="#075985" fill-opacity="0.6"
+                                            width="17.784216964057023" height="17.784216964057023"
+                                            x="377.21622485130484" y="48.94489151797146" z="18.41" id="video-697"
+                                            cx="386.10833333333335" cy="57.836999999999975" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(386.10833333333335, 57.836999999999975)"
+                                            d="M8.892,0A8.892,8.892,0,1,1,-8.892,0A8.892,8.892,0,1,1,8.892,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 707" fill="#075985" fill-opacity="0.6"
+                                            width="9.758992545575014" height="9.758992545575014" x="182.53925372721247"
+                                            y="92.74130372721248" z="4.417" id="video-707" cx="187.41875"
+                                            cy="97.62079999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(187.41875, 97.62079999999999)"
+                                            d="M4.879,0A4.879,4.879,0,1,1,-4.879,0A4.879,4.879,0,1,1,4.879,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 708" fill="#075985" fill-opacity="0.6"
+                                            width="13.633138352657262" height="13.633138352657262" x="181.3042641570047"
+                                            y="81.35283082367135" z="10.154" id="video-708" cx="188.12083333333334"
+                                            cy="88.16939999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(188.12083333333334, 88.16939999999998)"
+                                            d="M6.817,0A6.817,6.817,0,1,1,-6.817,0A6.817,6.817,0,1,1,6.817,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 710" fill="#075985" fill-opacity="0.6"
+                                            width="22.403545522071628" height="22.403545522071628" x="427.2117689056308"
+                                            y="51.533627238964186" z="30.162" id="video-710" cx="438.4135416666666"
+                                            cy="62.7354" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(438.4135416666666, 62.7354)"
+                                            d="M11.202,0A11.202,11.202,0,1,1,-11.202,0A11.202,11.202,0,1,1,11.202,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 713" fill="#075985" fill-opacity="0.6"
+                                            width="10.44317355111701" height="10.44317355111701" x="138.66799655777484"
+                                            y="52.01881322444151" z="5.292" id="video-713" cx="143.88958333333335"
+                                            cy="57.240400000000015" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(143.88958333333335, 57.240400000000015)"
+                                            d="M5.222,0A5.222,5.222,0,1,1,-5.222,0A5.222,5.222,0,1,1,5.222,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 796" fill="#075985" fill-opacity="0.6"
+                                            width="16.521155255380137" height="16.521155255380137" x="692.7321307056433"
+                                            y="150.27622237230992" z="15.667" id="video-796" cx="700.9927083333333"
+                                            cy="158.53679999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(700.9927083333333, 158.53679999999997)"
+                                            d="M8.261,0A8.261,8.261,0,1,1,-8.261,0A8.261,8.261,0,1,1,8.261,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 906" fill="#075985" fill-opacity="0.6"
+                                            width="17.391274671814386" height="17.391274671814386"
+                                            x="177.31894599742617" y="63.271362664092806" z="17.535" id="video-906"
+                                            cx="186.01458333333335" cy="71.967" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(186.01458333333335, 71.967)"
+                                            d="M8.696,0A8.696,8.696,0,1,1,-8.696,0A8.696,8.696,0,1,1,8.696,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 976" fill="#075985" fill-opacity="0.6"
+                                            width="16.086612745937018" height="16.086612745937018" x="239.4035686270315"
+                                            y="27.625293627031475" z="14.77" id="video-976" cx="247.446875"
+                                            cy="35.668599999999984" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(247.446875, 35.668599999999984)"
+                                            d="M8.043,0A8.043,8.043,0,1,1,-8.043,0A8.043,8.043,0,1,1,8.043,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 48" fill="#9f1239" fill-opacity="0.6"
+                                            width="18.69698898181427" height="18.69698898181427" x="656.8910888424261"
+                                            y="164.73130550909286" z="20.518" id="video-48" cx="666.2395833333333"
+                                            cy="174.0798" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(666.2395833333333, 174.0798)"
+                                            d="M9.348,0A9.348,9.348,0,1,1,-9.348,0A9.348,9.348,0,1,1,9.348,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 104" fill="#9f1239" fill-opacity="0.6"
+                                            width="11.32068211035395" height="11.32068211035395" x="670.0573672781563"
+                                            y="155.325658944823" z="6.501" id="video-104" cx="675.7177083333333"
+                                            cy="160.986" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(675.7177083333333, 160.986)"
+                                            d="M5.66,0A5.66,5.66,0,1,1,-5.66,0A5.66,5.66,0,1,1,5.66,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 179" fill="#9f1239" fill-opacity="0.6"
+                                            width="22.410242869661513" height="22.410242869661513" x="574.9969618985026"
+                                            y="126.60767856516922" z="30.181" id="video-179" cx="586.2020833333333"
+                                            cy="137.81279999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(586.2020833333333, 137.81279999999998)"
+                                            d="M11.205,0A11.205,11.205,0,1,1,-11.205,0A11.205,11.205,0,1,1,11.205,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 252" fill="#9f1239" fill-opacity="0.6"
+                                            width="20.969693078256434" height="20.969693078256434"
+                                            x="198.34744512753844" y="66.94575346087181" z="26.225" id="video-252"
+                                            cx="208.83229166666666" cy="77.43060000000003" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(208.83229166666666, 77.43060000000003)"
+                                            d="M10.485,0A10.485,10.485,0,1,1,-10.485,0A10.485,10.485,0,1,1,10.485,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 272" fill="#9f1239" fill-opacity="0.6"
+                                            width="21.41100382742369" height="21.41100382742369" x="196.3715814196215"
+                                            y="80.66669808628816" z="27.409" id="video-272" cx="207.07708333333335"
+                                            cy="91.3722" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(207.07708333333335, 91.3722)"
+                                            d="M10.706,0A10.706,10.706,0,1,1,-10.706,0A10.706,10.706,0,1,1,10.706,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 294" fill="#9f1239" fill-opacity="0.6"
+                                            width="21.88025102905669" height="21.88025102905669" x="443.62133281880506"
+                                            y="70.19567448547164" z="28.695" id="video-294" cx="454.5614583333334"
+                                            cy="81.13579999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(454.5614583333334, 81.13579999999999)"
+                                            d="M10.94,0A10.94,10.94,0,1,1,-10.94,0A10.94,10.94,0,1,1,10.94,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 360" fill="#9f1239" fill-opacity="0.6"
+                                            width="20.100053213672926" height="20.100053213672926" x="541.0478900598303"
+                                            y="136.42917339316352" z="23.964" id="video-360" cx="551.0979166666667"
+                                            cy="146.4792" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(551.0979166666667, 146.4792)"
+                                            d="M10.05,0A10.05,10.05,0,1,1,-10.05,0A10.05,10.05,0,1,1,10.05,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 425" fill="#9f1239" fill-opacity="0.6"
+                                            width="16.165467710139072" height="16.165467710139072" x="529.6755994782637"
+                                            y="81.12286614493048" z="14.931" id="video-425" cx="537.7583333333333"
+                                            cy="89.20560000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(537.7583333333333, 89.20560000000002)"
+                                            d="M8.083,0A8.083,8.083,0,1,1,-8.083,0A8.083,8.083,0,1,1,8.083,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 489" fill="#9f1239" fill-opacity="0.6"
+                                            width="18.443927969184184" height="18.443927969184184" x="533.4509526820746"
+                                            y="121.80843601540792" z="19.923" id="video-489" cx="542.6729166666667"
+                                            cy="131.03040000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(542.6729166666667, 131.03040000000001)"
+                                            d="M9.222,0A9.222,9.222,0,1,1,-9.222,0A9.222,9.222,0,1,1,9.222,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 507" fill="#9f1239" fill-opacity="0.6"
+                                            width="10.49673403420384" height="10.49673403420384" x="517.4151746495647"
+                                            y="117.64943298289808" z="5.363" id="video-507" cx="522.6635416666667"
+                                            cy="122.89779999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(522.6635416666667, 122.89779999999999)"
+                                            d="M5.248,0A5.248,5.248,0,1,1,-5.248,0A5.248,5.248,0,1,1,5.248,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 525" fill="#9f1239" fill-opacity="0.6"
+                                            width="14.570717343367175" height="14.570717343367175" x="514.6760996616497"
+                                            y="73.6620413283164" z="11.828" id="video-525" cx="521.9614583333333"
+                                            cy="80.94739999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(521.9614583333333, 80.94739999999999)"
+                                            d="M7.285,0A7.285,7.285,0,1,1,-7.285,0A7.285,7.285,0,1,1,7.285,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 563" fill="#9f1239" fill-opacity="0.6"
+                                            width="8.493730107805506" height="8.493730107805506" x="278.6552182794306"
+                                            y="64.83133494609724" z="2.955" id="video-563" cx="282.90208333333334"
+                                            cy="69.0782" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(282.90208333333334, 69.0782)"
+                                            d="M4.247,0A4.247,4.247,0,1,1,-4.247,0A4.247,4.247,0,1,1,4.247,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 603" fill="#9f1239" fill-opacity="0.6"
+                                            width="19.65904430941804" height="19.65904430941804" x="635.3475611786242"
+                                            y="99.440677845291" z="22.854" id="video-603" cx="645.1770833333333"
+                                            cy="109.27020000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(645.1770833333333, 109.27020000000003)"
+                                            d="M9.83,0A9.83,9.83,0,1,1,-9.83,0A9.83,9.83,0,1,1,9.83,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 621" fill="#9f1239" fill-opacity="0.6"
+                                            width="20.184359957465443" height="20.184359957465443"
+                                            x="224.01511168793394" y="51.073220021267275" z="24.179" id="video-621"
+                                            cx="234.10729166666667" cy="61.1654" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(234.10729166666667, 61.1654)"
+                                            d="M10.092,0A10.092,10.092,0,1,1,-10.092,0A10.092,10.092,0,1,1,10.092,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 633" fill="#9f1239" fill-opacity="0.6"
+                                            width="14.16892944862552" height="14.16892944862552" x="202.80095194235392"
+                                            y="69.71813527568725" z="11.097" id="video-633" cx="209.88541666666669"
+                                            cy="76.80260000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(209.88541666666669, 76.80260000000001)"
+                                            d="M7.084,0A7.084,7.084,0,1,1,-7.084,0A7.084,7.084,0,1,1,7.084,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 682" fill="#9f1239" fill-opacity="0.6"
+                                            width="20.437125837488495" height="20.437125837488495"
+                                            x="403.27102041458915" y="77.8566370812558" z="24.829" id="video-682"
+                                            cx="413.48958333333337" cy="88.07520000000004" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(413.48958333333337, 88.07520000000004)"
+                                            d="M10.219,0A10.219,10.219,0,1,1,-10.219,0A10.219,10.219,0,1,1,10.219,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 706" fill="#9f1239" fill-opacity="0.6"
+                                            width="15.691930661934185" height="15.691930661934185"
+                                            x="405.29257633569955" y="98.78663466903292" z="13.976" id="video-706"
+                                            cx="413.13854166666664" cy="106.63260000000001" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(413.13854166666664, 106.63260000000001)"
+                                            d="M7.846,0A7.846,7.846,0,1,1,-7.846,0A7.846,7.846,0,1,1,7.846,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 733" fill="#9f1239" fill-opacity="0.6"
+                                            width="19.05308949430286" height="19.05308949430286" x="666.8932469195153"
+                                            y="157.1114552528486" z="21.369" id="video-733" cx="676.4197916666667"
+                                            cy="166.63800000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(676.4197916666667, 166.63800000000003)"
+                                            d="M9.527,0A9.527,9.527,0,1,1,-9.527,0A9.527,9.527,0,1,1,9.527,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 797" fill="#9f1239" fill-opacity="0.6"
+                                            width="10.147818532104274" height="10.147818532104274" x="408.7667157339479"
+                                            y="66.29649073394785" z="4.907" id="video-797" cx="413.840625"
+                                            cy="71.37039999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(413.840625, 71.37039999999999)"
+                                            d="M5.074,0A5.074,5.074,0,1,1,-5.074,0A5.074,5.074,0,1,1,5.074,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 883" fill="#9f1239" fill-opacity="0.6"
+                                            width="20.988140850057892" height="20.988140850057892" x="525.5090545749711"
+                                            y="123.11112957497105" z="26.274" id="video-883" cx="536.003125"
+                                            cy="133.6052" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(536.003125, 133.6052)"
+                                            d="M10.494,0A10.494,10.494,0,1,1,-10.494,0A10.494,10.494,0,1,1,10.494,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 916" fill="#9f1239" fill-opacity="0.6"
+                                            width="13.23153245875864" height="13.23153245875864" x="510.080067103954"
+                                            y="122.49923377062069" z="9.471" id="video-916" cx="516.6958333333333"
+                                            cy="129.115" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(516.6958333333333, 129.115)"
+                                            d="M6.616,0A6.616,6.616,0,1,1,-6.616,0A6.616,6.616,0,1,1,6.616,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 933" fill="#9f1239" fill-opacity="0.6"
+                                            width="17.645556416142778" height="17.645556416142778"
+                                            x="493.83138845859526" y="79.84902179192862" z="18.099" id="video-933"
+                                            cx="502.65416666666664" cy="88.6718" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(502.65416666666664, 88.6718)"
+                                            d="M8.823,0A8.823,8.823,0,1,1,-8.823,0A8.823,8.823,0,1,1,8.823,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 953" fill="#9f1239" fill-opacity="0.6"
+                                            width="7.713005503624081" height="7.713005503624081" x="661.680997248188"
+                                            y="128.58689724818797" z="2.154" id="video-953" cx="665.5375" cy="132.4434"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(665.5375, 132.4434)"
+                                            d="M3.857,0A3.857,3.857,0,1,1,-3.857,0A3.857,3.857,0,1,1,3.857,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 994" fill="#9f1239" fill-opacity="0.6"
+                                            width="10.290800436926949" height="10.290800436926949" x="466.6170997815366"
+                                            y="68.64279978153652" z="5.092" id="video-994" cx="471.76250000000005"
+                                            cy="73.7882" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(471.76250000000005, 73.7882)"
+                                            d="M5.145,0A5.145,5.145,0,1,1,-5.145,0A5.145,5.145,0,1,1,5.145,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 999" fill="#9f1239" fill-opacity="0.6"
+                                            width="13.659183865976969" height="13.659183865976969"
+                                            x="320.30374140034485" y="23.06140806701154" z="10.199" id="video-999"
+                                            cx="327.1333333333333" cy="29.891000000000027" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(327.1333333333333, 29.891000000000027)"
+                                            d="M6.83,0A6.83,6.83,0,1,1,-6.83,0A6.83,6.83,0,1,1,6.83,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 51" fill="#166534" fill-opacity="0.6"
+                                            width="17.29290000287722" height="17.29290000287722" x="380.270216665228"
+                                            y="72.26954999856142" z="17.319" id="video-51" cx="388.91666666666663"
+                                            cy="80.91600000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(388.91666666666663, 80.91600000000003)"
+                                            d="M8.646,0A8.646,8.646,0,1,1,-8.646,0A8.646,8.646,0,1,1,8.646,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 67" fill="#166534" fill-opacity="0.6" width="16.3379957191164"
+                                            height="16.3379957191164" x="220.67266880710847" y="60.281202140441835"
+                                            z="15.286" id="video-67" cx="228.84166666666667" cy="68.45020000000004"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(228.84166666666667, 68.45020000000004)"
+                                            d="M8.169,0A8.169,8.169,0,1,1,-8.169,0A8.169,8.169,0,1,1,8.169,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 94" fill="#166534" fill-opacity="0.6"
+                                            width="9.532172089657664" height="9.532172089657664" x="512.9828722885045"
+                                            y="73.00991395517119" z="4.14" id="video-94" cx="517.7489583333333"
+                                            cy="77.77600000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(517.7489583333333, 77.77600000000001)"
+                                            d="M4.766,0A4.766,4.766,0,1,1,-4.766,0A4.766,4.766,0,1,1,4.766,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 185" fill="#166534" fill-opacity="0.6"
+                                            width="12.6111063258842" height="12.6111063258842" x="116.87257183705789"
+                                            y="115.90144683705789" z="8.456" id="video-185" cx="123.178125" cy="122.207"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(123.178125, 122.207)"
+                                            d="M6.306,0A6.306,6.306,0,1,1,-6.306,0A6.306,6.306,0,1,1,6.306,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 193" fill="#166534" fill-opacity="0.6"
+                                            width="19.5773168097872" height="19.5773168097872" x="462.32488326177304"
+                                            y="72.2891415951064" z="22.651" id="video-193" cx="472.11354166666666"
+                                            cy="82.0778" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(472.11354166666666, 82.0778)"
+                                            d="M9.789,0A9.789,9.789,0,1,1,-9.789,0A9.789,9.789,0,1,1,9.789,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 283" fill="#166534" fill-opacity="0.6"
+                                            width="20.09062027838245" height="20.09062027838245" x="188.6067731941421"
+                                            y="34.79208986080876" z="23.94" id="video-283" cx="198.65208333333334"
+                                            cy="44.83739999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(198.65208333333334, 44.83739999999998)"
+                                            d="M10.045,0A10.045,10.045,0,1,1,-10.045,0A10.045,10.045,0,1,1,10.045,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 296" fill="#166534" fill-opacity="0.6"
+                                            width="18.038651669721183" height="18.038651669721183"
+                                            x="452.91400749847276" y="56.69907416513942" z="18.987" id="video-296"
+                                            cx="461.93333333333334" cy="65.71840000000002" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(461.93333333333334, 65.71840000000002)"
+                                            d="M9.019,0A9.019,9.019,0,1,1,-9.019,0A9.019,9.019,0,1,1,9.019,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 299" fill="#166534" fill-opacity="0.6"
+                                            width="21.92712772379222" height="21.92712772379222" x="452.3739361381039"
+                                            y="76.60923613810388" z="28.825" id="video-299" cx="463.3375"
+                                            cy="87.57279999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(463.3375, 87.57279999999999)"
+                                            d="M10.964,0A10.964,10.964,0,1,1,-10.964,0A10.964,10.964,0,1,1,10.964,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 341" fill="#166534" fill-opacity="0.6"
+                                            width="19.785593684640606" height="19.785593684640606" x="515.9301198243464"
+                                            y="128.9876031576797" z="23.17" id="video-341" cx="525.8229166666667"
+                                            cy="138.8804" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(525.8229166666667, 138.8804)"
+                                            d="M9.893,0A9.893,9.893,0,1,1,-9.893,0A9.893,9.893,0,1,1,9.893,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 653" fill="#166534" fill-opacity="0.6"
+                                            width="16.169375940183738" height="16.169375940183738" x="399.0861453632415"
+                                            y="93.93211202990817" z="14.939" id="video-653" cx="407.17083333333335"
+                                            cy="102.01680000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(407.17083333333335, 102.01680000000003)"
+                                            d="M8.085,0A8.085,8.085,0,1,1,-8.085,0A8.085,8.085,0,1,1,8.085,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 699" fill="#166534" fill-opacity="0.6"
+                                            width="17.25586491411378" height="17.25586491411378" x="647.7824842096098"
+                                            y="156.6284675429431" z="17.238" id="video-699" cx="656.4104166666667"
+                                            cy="165.25639999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(656.4104166666667, 165.25639999999999)"
+                                            d="M8.628,0A8.628,8.628,0,1,1,-8.628,0A8.628,8.628,0,1,1,8.628,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 791" fill="#166534" fill-opacity="0.6"
+                                            width="8.389877206548352" height="8.389877206548352" x="288.5363113967258"
+                                            y="31.787661396725845" z="2.844" id="video-791" cx="292.73125"
+                                            cy="35.98260000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(292.73125, 35.98260000000002)"
+                                            d="M4.195,0A4.195,4.195,0,1,1,-4.195,0A4.195,4.195,0,1,1,4.195,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 849" fill="#166534" fill-opacity="0.6"
+                                            width="17.36536881720212" height="17.36536881720212" x="566.9881489247323"
+                                            y="129.03591559139895" z="17.478" id="video-849" cx="575.6708333333333"
+                                            cy="137.7186" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(575.6708333333333, 137.7186)"
+                                            d="M8.683,0A8.683,8.683,0,1,1,-8.683,0A8.683,8.683,0,1,1,8.683,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 975" fill="#166534" fill-opacity="0.6"
+                                            width="13.339138573221229" height="13.339138573221229"
+                                            x="493.17626404672274" y="122.7280307133894" z="9.652" id="video-975"
+                                            cx="499.84583333333336" cy="129.3976" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(499.84583333333336, 129.3976)"
+                                            d="M6.67,0A6.67,6.67,0,1,1,-6.67,0A6.67,6.67,0,1,1,6.67,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 986" fill="#166534" fill-opacity="0.6"
+                                            width="14.055314725442548" height="14.055314725442548" x="698.1775509706121"
+                                            y="119.41834263727876" z="10.894" id="video-986" cx="705.2052083333333"
+                                            cy="126.44600000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(705.2052083333333, 126.44600000000003)"
+                                            d="M7.028,0A7.028,7.028,0,1,1,-7.028,0A7.028,7.028,0,1,1,7.028,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 100" fill="#9a3412" fill-opacity="0.6"
+                                            width="7.010260037222414" height="7.010260037222414" x="154.4261199813888"
+                                            y="64.69386998138877" z="1.499" id="video-100" cx="157.93125"
+                                            cy="68.19899999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(157.93125, 68.19899999999998)"
+                                            d="M3.505,0A3.505,3.505,0,1,1,-3.505,0A3.505,3.505,0,1,1,3.505,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 108" fill="#9a3412" fill-opacity="0.6"
+                                            width="15.186498772911616" height="15.186498772911616"
+                                            x="128.92445894687754" y="77.02795061354419" z="12.988" id="video-108"
+                                            cx="136.51770833333333" cy="84.6212" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(136.51770833333333, 84.6212)"
+                                            d="M7.593,0A7.593,7.593,0,1,1,-7.593,0A7.593,7.593,0,1,1,7.593,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 136" fill="#9a3412" fill-opacity="0.6"
+                                            width="14.830755555623199" height="14.830755555623199" x="519.8117055555217"
+                                            y="105.4030222221884" z="12.312" id="video-136" cx="527.2270833333333"
+                                            cy="112.8184" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(527.2270833333333, 112.8184)"
+                                            d="M7.415,0A7.415,7.415,0,1,1,-7.415,0A7.415,7.415,0,1,1,7.415,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 224" fill="#9a3412" fill-opacity="0.6"
+                                            width="19.25062968382097" height="19.25062968382097" x="594.4798934914228"
+                                            y="112.58168515808951" z="21.848" id="video-224" cx="604.1052083333333"
+                                            cy="122.207" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(604.1052083333333, 122.207)"
+                                            d="M9.625,0A9.625,9.625,0,1,1,-9.625,0A9.625,9.625,0,1,1,9.625,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 241" fill="#9a3412" fill-opacity="0.6"
+                                            width="19.963235042688105" height="19.963235042688105" x="228.6892158119893"
+                                            y="31.65298247865594" z="23.617" id="video-241" cx="238.67083333333335"
+                                            cy="41.63459999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(238.67083333333335, 41.63459999999999)"
+                                            d="M9.982,0A9.982,9.982,0,1,1,-9.982,0A9.982,9.982,0,1,1,9.982,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 431" fill="#9a3412" fill-opacity="0.6"
+                                            width="19.367615818415118" height="19.367615818415118"
+                                            x="208.27556709079244" y="55.218192090792456" z="22.134" id="video-431"
+                                            cx="217.959375" cy="64.90200000000002" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(217.959375, 64.90200000000002)"
+                                            d="M9.684,0A9.684,9.684,0,1,1,-9.684,0A9.684,9.684,0,1,1,9.684,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 530" fill="#9a3412" fill-opacity="0.6"
+                                            width="19.422185088563193" height="19.422185088563193" x="577.5441157890517"
+                                            y="125.77810745571841" z="22.268" id="video-530" cx="587.2552083333333"
+                                            cy="135.4892" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(587.2552083333333, 135.4892)"
+                                            d="M9.711,0A9.711,9.711,0,1,1,-9.711,0A9.711,9.711,0,1,1,9.711,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 535" fill="#9a3412" fill-opacity="0.6"
+                                            width="12.473194019936658" height="12.473194019936658"
+                                            x="439.19777799003174" y="88.55820299003166" z="8.237" id="video-535"
+                                            cx="445.43437500000005" cy="94.7948" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(445.43437500000005, 94.7948)"
+                                            d="M6.237,0A6.237,6.237,0,1,1,-6.237,0A6.237,6.237,0,1,1,6.237,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 568" fill="#9a3412" fill-opacity="0.6"
+                                            width="19.980240311608377" height="19.980240311608377" x="484.2390465108625"
+                                            y="65.02267984419578" z="23.66" id="video-568" cx="494.2291666666667"
+                                            cy="75.01279999999997" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(494.2291666666667, 75.01279999999997)"
+                                            d="M9.99,0A9.99,9.99,0,1,1,-9.99,0A9.99,9.99,0,1,1,9.99,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 600" fill="#9a3412" fill-opacity="0.6"
+                                            width="14.655574180030774" height="14.655574180030774"
+                                            x="451.09512957665123" y="93.84121290998459" z="11.985" id="video-600"
+                                            cx="458.4229166666666" cy="101.16899999999998" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(458.4229166666666, 101.16899999999998)"
+                                            d="M7.328,0A7.328,7.328,0,1,1,-7.328,0A7.328,7.328,0,1,1,7.328,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 701" fill="#9a3412" fill-opacity="0.6"
+                                            width="21.10335476002626" height="21.10335476002626" x="124.21082261998686"
+                                            y="89.9893226199869" z="26.581" id="video-701" cx="134.7625"
+                                            cy="100.54100000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols" transform="translate(134.7625, 100.54100000000003)"
+                                            d="M10.552,0A10.552,10.552,0,1,1,-10.552,0A10.552,10.552,0,1,1,10.552,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 775" fill="#9a3412" fill-opacity="0.6"
+                                            width="7.79246950404761" height="7.79246950404761" x="671.8214735813095"
+                                            y="155.58256524797622" z="2.232" id="video-775" cx="675.7177083333333"
+                                            cy="159.47880000000004" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(675.7177083333333, 159.47880000000004)"
+                                            d="M3.896,0A3.896,3.896,0,1,1,-3.896,0A3.896,3.896,0,1,1,3.896,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 778" fill="#9a3412" fill-opacity="0.6"
+                                            width="13.06876426656423" height="13.06876426656423" x="93.47499286671788"
+                                            y="122.48641786671786" z="9.2" id="video-778" cx="100.009375"
+                                            cy="129.02079999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(100.009375, 129.02079999999998)"
+                                            d="M6.534,0A6.534,6.534,0,1,1,-6.534,0A6.534,6.534,0,1,1,6.534,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 938" fill="#9a3412" fill-opacity="0.6"
+                                            width="15.191178805083569" height="15.191178805083569" x="673.0367022641249"
+                                            y="151.34941059745822" z="12.997" id="video-938" cx="680.6322916666667"
+                                            cy="158.945" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(680.6322916666667, 158.945)"
+                                            d="M7.596,0A7.596,7.596,0,1,1,-7.596,0A7.596,7.596,0,1,1,7.596,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 961" fill="#9a3412" fill-opacity="0.6"
+                                            width="13.932840030996196" height="13.932840030996196" x="576.0762883178352"
+                                            y="136.6239799845019" z="10.677" id="video-961" cx="583.0427083333333"
+                                            cy="143.5904" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(583.0427083333333, 143.5904)"
+                                            d="M6.966,0A6.966,6.966,0,1,1,-6.966,0A6.966,6.966,0,1,1,6.966,0"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g class="recharts-layer recharts-scatter">
+                            <g class="recharts-layer">
+                                <g class="recharts-layer">
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 196" fill="#831843" fill-opacity="0.6"
+                                            width="17.500833921149766" height="17.500833921149766" x="611.8537497060919"
+                                            y="125.10598303942513" z="17.777" id="video-196" cx="620.6041666666667"
+                                            cy="133.8564" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(620.6041666666667, 133.8564)"
+                                            d="M8.75,0A8.75,8.75,0,1,1,-8.75,0A8.75,8.75,0,1,1,8.75,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 210" fill="#831843" fill-opacity="0.6"
+                                            width="19.868452120062802" height="19.868452120062802" x="298.5938989399686"
+                                            y="69.72577393996858" z="23.378" id="video-210" cx="308.528125"
+                                            cy="79.65999999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(308.528125, 79.65999999999998)"
+                                            d="M9.934,0A9.934,9.934,0,1,1,-9.934,0A9.934,9.934,0,1,1,9.934,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 234" fill="#831843" fill-opacity="0.6"
+                                            width="13.420601141677794" height="13.420601141677794"
+                                            x="405.72615776249444" y="47.98669942916108" z="9.79" id="video-234"
+                                            cx="412.43645833333335" cy="54.696999999999974" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(412.43645833333335, 54.696999999999974)"
+                                            d="M6.71,0A6.71,6.71,0,1,1,-6.71,0A6.71,6.71,0,1,1,6.71,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 307" fill="#831843" fill-opacity="0.6"
+                                            width="17.86265248190612" height="17.86265248190612" x="530.9332570923802"
+                                            y="104.38947375904695" z="18.587" id="video-307" cx="539.8645833333333"
+                                            cy="113.3208" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(539.8645833333333, 113.3208)"
+                                            d="M8.931,0A8.931,8.931,0,1,1,-8.931,0A8.931,8.931,0,1,1,8.931,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 373" fill="#831843" fill-opacity="0.6"
+                                            width="16.769321422139015" height="16.769321422139015"
+                                            x="200.79867262226384" y="85.40533928893049" z="16.19" id="video-373"
+                                            cx="209.18333333333334" cy="93.78999999999999" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(209.18333333333334, 93.78999999999999)"
+                                            d="M8.385,0A8.385,8.385,0,1,1,-8.385,0A8.385,8.385,0,1,1,8.385,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 413" fill="#831843" fill-opacity="0.6"
+                                            width="20.52466609249847" height="20.52466609249847" x="325.6470419537508"
+                                            y="30.336066953750763" z="25.056" id="video-413" cx="335.909375"
+                                            cy="40.5984" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(335.909375, 40.5984)"
+                                            d="M10.262,0A10.262,10.262,0,1,1,-10.262,0A10.262,10.262,0,1,1,10.262,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 453" fill="#831843" fill-opacity="0.6"
+                                            width="18.308969868353792" height="18.308969868353792" x="697.4548900658231"
+                                            y="122.40971506582314" z="19.609" id="video-453" cx="706.609375"
+                                            cy="131.56420000000003" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(706.609375, 131.56420000000003)"
+                                            d="M9.154,0A9.154,9.154,0,1,1,-9.154,0A9.154,9.154,0,1,1,9.154,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 457" fill="#831843" fill-opacity="0.6"
+                                            width="19.5304618317858" height="19.5304618317858" x="332.81393575077374"
+                                            y="59.689769084107084" z="22.535" id="video-457" cx="342.57916666666665"
+                                            cy="69.45499999999998" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(342.57916666666665, 69.45499999999998)"
+                                            d="M9.765,0A9.765,9.765,0,1,1,-9.765,0A9.765,9.765,0,1,1,9.765,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 487" fill="#831843" fill-opacity="0.6"
+                                            width="8.749324254126305" height="8.749324254126305" x="256.4117962062702"
+                                            y="44.70173787293685" z="3.234" id="video-487" cx="260.78645833333337"
+                                            cy="49.07640000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(260.78645833333337, 49.07640000000001)"
+                                            d="M4.375,0A4.375,4.375,0,1,1,-4.375,0A4.375,4.375,0,1,1,4.375,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 499" fill="#831843" fill-opacity="0.6"
+                                            width="12.275970441128816" height="12.275970441128816" x="480.7193064461022"
+                                            y="89.19061477943559" z="7.928" id="video-499" cx="486.85729166666664"
+                                            cy="95.3286" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(486.85729166666664, 95.3286)"
+                                            d="M6.138,0A6.138,6.138,0,1,1,-6.138,0A6.138,6.138,0,1,1,6.138,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 584" fill="#831843" fill-opacity="0.6"
+                                            width="21.51220868841299" height="21.51220868841299" x="384.1282706557935"
+                                            y="48.9020956557935" z="27.684" id="video-584" cx="394.884375"
+                                            cy="59.658199999999994" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(394.884375, 59.658199999999994)"
+                                            d="M10.756,0A10.756,10.756,0,1,1,-10.756,0A10.756,10.756,0,1,1,10.756,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 622" fill="#831843" fill-opacity="0.6"
+                                            width="14.814770174482433" height="14.814770174482433" x="582.3051149127588"
+                                            y="117.3744149127588" z="12.282" id="video-622" cx="589.7125" cy="124.7818"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(589.7125, 124.7818)"
+                                            d="M7.407,0A7.407,7.407,0,1,1,-7.407,0A7.407,7.407,0,1,1,7.407,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 642" fill="#831843" fill-opacity="0.6"
+                                            width="22.04245011368242" height="22.04245011368242" x="210.0975249431588"
+                                            y="47.88337494315879" z="29.146" id="video-642" cx="221.11875" cy="58.9046"
+                                            stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(221.11875, 58.9046)"
+                                            d="M11.021,0A11.021,11.021,0,1,1,-11.021,0A11.021,11.021,0,1,1,11.021,0">
+                                        </path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 673" fill="#831843" fill-opacity="0.6"
+                                            width="12.302321196002715" height="12.302321196002715"
+                                            x="230.41342273533198" y="43.741639401998626" z="7.969" id="video-673"
+                                            cx="236.56458333333333" cy="49.89279999999998" stroke="none"
+                                            stroke-width="0" class="recharts-symbols"
+                                            transform="translate(236.56458333333333, 49.89279999999998)"
+                                            d="M6.151,0A6.151,6.151,0,1,1,-6.151,0A6.151,6.151,0,1,1,6.151,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 690" fill="#831843" fill-opacity="0.6"
+                                            width="19.89030410019927" height="19.89030410019927" x="140.2631812832337"
+                                            y="65.03624794990037" z="23.433" id="video-690" cx="150.20833333333334"
+                                            cy="74.98140000000001" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(150.20833333333334, 74.98140000000001)"
+                                            d="M9.945,0A9.945,9.945,0,1,1,-9.945,0A9.945,9.945,0,1,1,9.945,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 821" fill="#831843" fill-opacity="0.6"
+                                            width="11.963817380993968" height="11.963817380993968" x="647.971216309503"
+                                            y="110.73009130950301" z="7.449" id="video-821" cx="653.953125"
+                                            cy="116.71199999999999" stroke="none" stroke-width="0"
+                                            class="recharts-symbols"
+                                            transform="translate(653.953125, 116.71199999999999)"
+                                            d="M5.982,0A5.982,5.982,0,1,1,-5.982,0A5.982,5.982,0,1,1,5.982,0"></path>
+                                    </g>
+                                    <g class="recharts-layer recharts-scatter-symbol" role="img">
+                                        <path name="Video 878" fill="#831843" fill-opacity="0.6"
+                                            width="21.009580121813606" height="21.009580121813606" x="578.8566682724265"
+                                            y="118.42180993909321" z="26.331" id="video-878" cx="589.3614583333333"
+                                            cy="128.9266" stroke="none" stroke-width="0" class="recharts-symbols"
+                                            transform="translate(589.3614583333333, 128.9266)"
+                                            d="M10.505,0A10.505,10.505,0,1,1,-10.505,0A10.505,10.505,0,1,1,10.505,0">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div tabindex="-1" class="recharts-tooltip-wrapper"
+                        style="visibility: hidden; pointer-events: none; position: absolute; top: 0px; left: 0px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-200">
+            <p class="text-gray-700 text-sm leading-relaxed"><span class="font-semibold text-gray-900">💡
+                    Insight:</span> Bubble size = views. Each color represents a theme within the UX Testing category.
+                Optimal videos typically show 5-15 min duration with 40-60% engagement.</p>
+        </div>
+        <div class="mt-4 border-2 border-gray-200 rounded-xl overflow-hidden"><button
+                class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-gray-50 to-blue-50/30 hover:from-gray-100 hover:to-blue-100/30 transition-colors">
+                <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-info w-5 h-5 text-blue-600">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg><span class="text-gray-900 text-sm sm:text-base">What do these metrics mean?</span></div><span
+                    class="text-gray-500">▼</span>
+            </button></div>
+    </div>
+</div>
