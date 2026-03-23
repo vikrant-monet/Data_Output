@@ -72,23 +72,15 @@ export class Dashboard implements OnInit {
     this.videoForm = this.fb.group({
      title : [ '' , Validators.required],
      category : [ '' , Validators.required],
-     s_category : [ '' , Validators.required],
-     theme : [ '' , Validators.required],
+     industry : [ '' , Validators.required],
+     genre : [ '' ],
      duration : [ '' , Validators.required],
-     target_demographics : [ '' , Validators.required],
-     banner_style : [ '' , Validators.required],
-     target_platform : [ '' , Validators.required],
-     ott_platoform : [ '' , Validators.required]
+     target_demographics : [ ''],
+    //  banner_style : [ '' , Validators.required],
+     target_platform : [ ''],
+    //  ott_platoform : [ '' , Validators.required]
     });
   }
-
-    COLORS = [
-    '#0ea5e9', '#f43f5e', '#22c55e', '#a855f7', '#ec4899',
-    '#f97316', '#06b6d4', '#eab308', '#a855f7', '#14b8a6',
-    '#fb923c', '#c026d3', '#10b981', '#6366f1', '#84cc16'
-  ];
-  distribution = signal<any>('');
-  platform = signal<any>('');
 
   ngOnInit(): void {
     // Any initialization logic
@@ -101,21 +93,19 @@ export class Dashboard implements OnInit {
         // this.activePlan.set(false);
       }
     }
-    this.videoForm.get('theme')?.disable();
-    this.videoForm.get('banner_style')?.disable()
+    this.videoForm.get('genre')?.disable();
+    // this.videoForm.get('banner_style')?.disable()
 
     this.videoForm.get('category')?.valueChanges.subscribe((res:any) => {
       if(res){
-          this.videoForm.get('theme')?.enable();
+          this.videoForm.get('genre')?.enable();
       }
     })
-      this.videoForm.get('theme')?.valueChanges.subscribe((res:any) => {
-      if(res){
-        // console.log(res);
-        
-          this.videoForm.get('banner_style')?.enable();
-      }
-    })
+    //   this.videoForm.get('genre')?.valueChanges.subscribe((res:any) => {
+    //   if(res){
+    //       this.videoForm.get('banner_style')?.enable();
+    //   }
+    // })
 
     this.getFormData('/dropdownData');
   }
@@ -228,29 +218,9 @@ export class Dashboard implements OnInit {
 }
 
 submit(){
-    this.getCategoryData('/graph-count');
+ console.log(this.videoForm.value);
 }
-  getCategoryData(endpoint:string){
-    this.loader.set(true);
-    this._api.getApi(endpoint).subscribe((res:any) => {
-      this.loader.set(false);
-      if(res && res.data){
-        // console.log(res);
-        const distribution = res.data.Industry.map((it:any , i:any) => {
-          it['color'] = this.COLORS[i];
-          return it;
-        })
-        const platform = res.data.platform.map((it:any , i:any) => {
-          it['color'] = this.COLORS[i];
-          return it;
-        })
-        this.distribution.set(distribution);
-        this.platform.set(platform)
-        // console.log(this.distribution() , this.platform());
-        
-      }
-    })
-  }
+
 
   // Getter for Dashboard component (to be implemented)
   get DashboardComponent(): any {

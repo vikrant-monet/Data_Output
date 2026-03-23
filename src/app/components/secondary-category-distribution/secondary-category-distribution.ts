@@ -25,22 +25,11 @@ export class SecondaryCategoryDistribution
   private chart: any;
   private resizeObserver?: ResizeObserver;
 
-  categoriesSignal = signal([
-    { name: 'Technology', value: 116, isSelected: false, color: '#0ea5e9' },
-    { name: 'Comedy', value: 107, isSelected: false, color: '#f43f5e' },
-    { name: 'Gaming', value: 106, isSelected: false, color: '#22c55e' },
-    { name: 'Entertainment', value: 103, isSelected: false, color: '#a855f7' },
-    { name: 'Lifestyle', value: 100, isSelected: false, color: '#ec4899' },
-    { name: 'Education', value: 98, isSelected: false, color: '#f97316' },
-    { name: 'Documentary', value: 96, isSelected: false, color: '#06b6d4' },
-    { name: 'Music', value: 95, isSelected: false, color: '#eab308' },
-    { name: 'Sports', value: 91, isSelected: false, color: '#a855f7' },
-    { name: 'News', value: 88, isSelected: false, color: '#14b8a6' }
-  ]);
+  categoriesSignal = signal<any>('');
 
   ngOnInit(): void {
-    if (this.distribution?.length) {
-      this.categoriesSignal.set(this.distribution);
+    if (this.distribution()?.length) {
+      this.categoriesSignal.set(this.distribution());
     }
   }
 

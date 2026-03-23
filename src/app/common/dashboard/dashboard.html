@@ -74,11 +74,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
         <div class="lg:col-span-2 order-2 lg:order-1">
             <!-- Overview Component -->
-             @if(platform().length){
-                 <app-overview (setVideoForm)="setShowUploadForm($event)" [distribution]="distribution()" [platform]="platform()"></app-overview>
-             }@else {
-                <app-overview (setVideoForm)="setShowUploadForm($event)" [distribution]="distribution()" [platform]="platform()"></app-overview>
-             }
+                <app-overview (setVideoForm)="setShowUploadForm($event)"></app-overview>
         </div>
 
         <div class="lg:col-span-1 order-1 lg:order-2">
@@ -191,6 +187,26 @@
                                     placeholder="Enter video title" value="">
                             </div>
                             <div>
+                                <label for="duration" class="block text-gray-700 mb-2">Duration
+                                    (seconds)</label>
+                                <input type="number" id="duration" formControlName="duration"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="e.g., 600" min="1" value="">
+                            </div>
+                            <div>
+                                <label for="secondaryCategory" class="block text-gray-700 mb-2">Industry
+                                    <span class="text-red-500">*</span>
+                                </label>
+                                <select id="secondaryCategory" formControlName="industry"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    required="">
+                                    <option value="">Select secondary category</option>
+                                    @for(item of dropDownData()[0].Industry ; track $index){
+                                    <option [ngValue]="item">{{item.displayName}}</option>
+                                    }
+                                </select>
+                            </div>
+                            <div>
                                 <label for="category" class="block text-gray-700 mb-2">Category
                                     <span class="text-red-500">*</span>
                                 </label>
@@ -203,36 +219,16 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="secondaryCategory" class="block text-gray-700 mb-2">Secondary Category
-                                    <span class="text-red-500">*</span>
-                                </label>
-                                <select id="secondaryCategory" formControlName="s_category"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    required="">
-                                    <option value="">Select secondary category</option>
-                                    @for(item of dropDownData()[0].Industry ; track $index){
-                                    <option [ngValue]="item">{{item.displayName}}</option>
-                                    }
-                                </select>
-                            </div>
-                            <div>
-                                <label for="theme" class="block text-gray-700 mb-2">Theme </label>
-                                <select formControlName="theme" id="theme"
+                                <label for="theme" class="block text-gray-700 mb-2">Genre </label>
+                                <select formControlName="genre" id="theme"
                                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="">{{!videoForm.get('category')?.value ? 'Select category first' : 'Select theme'}}</option>
+                                    <option value="">{{!videoForm.get('category')?.value ? 'Select category first' : 'Select genre'}}</option>
                                     @for(item of dropDownData()[0].Genre ; track $index){
                                     <option [ngValue]="item">{{item.displayName}}</option>
                                     }
                                 </select>
                                 <p class="text-sm text-gray-500 mt-1">Please select a category first to see relevant
-                                    themes</p>
-                            </div>
-                            <div>
-                                <label for="duration" class="block text-gray-700 mb-2">Duration
-                                    (seconds)</label>
-                                <input type="number" id="duration" formControlName="duration"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="e.g., 600" min="1" value="">
+                                    genre</p>
                             </div>
                             <div><label for="demographics" class="block text-gray-700 mb-2">Target
                                     Demographics</label>
@@ -247,17 +243,18 @@
                                     <option value="55+">55+</option>
                                 </select>
                             </div>
-                            <div><label for="banner" class="block text-gray-700 mb-2">Banner Style </label>
+                            <!-- <div>
+                                <label for="banner" class="block text-gray-700 mb-2">Banner Style </label>
                                 <select id="banner" formControlName="banner_style"
                                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="">{{!videoForm.get('theme')?.value ? 'Select theme first' : 'Select banner style'}}</option>
+                                    <option value="">{{!videoForm.get('genre')?.value ? 'Select genre first' : 'Select banner style'}}</option>
                                     <option value="Bright Colorful">Bright Colorful</option>
                                     <option value="Pop Art">Pop Art</option>
                                     <option value="Playful Yellow">Playful Yellow</option>
                                     <option value="Fun Gradient">Fun Gradient</option>
                                     <option value="Cartoon Style">Cartoon Style</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div><label for="platform" class="block text-gray-700 mb-2">Target
                                     Platform</label>
                                 <select id="platform" formControlName="target_platform"
@@ -268,7 +265,8 @@
                                     }
                                 </select>
                             </div>
-                            <div><label for="ottPlatform" class="block text-gray-700 mb-2">OTT Streaming
+                            <!-- <div>
+                                <label for="ottPlatform" class="block text-gray-700 mb-2">OTT Streaming
                                     Platform</label>
                                 <select id="ottPlatform" formControlName="ott_platoform"
                                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -283,9 +281,11 @@
                                     <option value="Paramount+">Paramount+</option>
                                     <option value="Discovery+">Discovery+</option>
                                 </select>
-                            </div><button type="submit" [disabled]="!videoForm.valid" (click)="submit()"
+                            </div> -->
+                            <button type="submit" [disabled]="!videoForm.valid" (click)="submit()"
                                 class="w-full bg-blue-600 text-white py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed text-sm sm:text-base">Analyze
-                                Video</button>
+                                Video
+                            </button>
                         </form>
                         }
                     </div>
@@ -390,8 +390,7 @@
             </button>
             @if (isDemoMode()) {
             <p class="text-gray-600 mt-4 text-sm">
-                {{ reservedPlan() ? '✓ Plan Reserved - Features unlocking soon!' : 'Reserve now, pay later (Dec 31st)'
-                }}
+                {{ reservedPlan() ? '✓ Plan Reserved - Features unlocking soon!' : 'Reserve now, pay later (Dec 31st)' }}
             </p>
             }
         </div>

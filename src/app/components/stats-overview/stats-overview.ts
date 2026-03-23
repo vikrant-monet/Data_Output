@@ -120,7 +120,7 @@ export class StatsOverview {
 
   // Toggle comparison mode
   toggleComparison(): void {
-    this.showComparisonSignal.update(value => !value);
+    // this.showComparisonSignal.update(value => !value);
   }
 
   // Optional: Method to update metrics data dynamically

@@ -6,6 +6,7 @@ import { BubbleChart } from '../bubble-chart/bubble-chart';
 import { SecondaryCategoryDistribution } from '../secondary-category-distribution/secondary-category-distribution';
 import { Api } from '../../services/api';
 import { SecondaryCategoryPlatform } from '../secondary-category-platform/secondary-category-platform';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Import types
 // import { VideoMetadata } from '../../types/video';
@@ -23,7 +24,7 @@ interface VideoMetadata {
 
 @Component({
   selector: 'app-overview',
-  imports: [CommonModule, ReactiveFormsModule , StatsOverview , BubbleChart , SecondaryCategoryDistribution , SecondaryCategoryPlatform],
+  imports: [CommonModule, ReactiveFormsModule , StatsOverview , BubbleChart , SecondaryCategoryDistribution , SecondaryCategoryPlatform , MatProgressSpinnerModule],
   templateUrl: './overview.html',
   styleUrl: './overview.scss',
 })
@@ -39,9 +40,6 @@ export class Overview  implements OnInit {
   set selectedVideoInput(value: VideoMetadata | null) {
     this.selectedVideoSignal.set(value);
   }
-@Input() distribution!:any;
-@Input() platform!: any;
-
   @Output() setVideoForm = new EventEmitter<any>()
   setShow = signal<boolean>(false);
   
@@ -50,6 +48,14 @@ export class Overview  implements OnInit {
 
   // Computed signals
   testingCategories = ['Ad Testing', 'Movie Testing', 'Concept Testing', 'A/B Testing', 'UX Testing'];
+  distribution = signal<any>('');
+  platform = signal<any>('');
+  COLORS = [
+  '#0ea5e9', '#f43f5e', '#22c55e', '#a855f7', '#ec4899',
+  '#f97316', '#06b6d4', '#eab308', '#a855f7', '#14b8a6',
+  '#fb923c', '#c026d3', '#10b981', '#6366f1', '#84cc16'
+  ];
+  loader = signal<boolean>(false);
 
   
   isTestingCategory: Signal<boolean> = computed(() => {
@@ -78,7 +84,7 @@ export class Overview  implements OnInit {
   ngOnInit(): void {
     // Any initialization logic
     // console.log(this.distribution,'fsdfasfsadfs');
-    
+      this.getCategoryData('/graph-count');
   }
 
   // Animation state signal
@@ -95,6 +101,28 @@ export class Overview  implements OnInit {
     setTimeout(() => {
       this.animationState.set('idle');
     }, 500);
+  }
+
+    getCategoryData(endpoint:string){
+    this.loader.set(true);
+    this.api.getApi(endpoint).subscribe((res:any) => {
+      this.loader.set(false);
+      if(res && res.data){
+        // console.log(res);
+        const distribution = res.data.Industry.map((it:any , i:any) => {
+          it['color'] = this.COLORS[i];
+          return it;
+        })
+        const platform = res.data.platform.map((it:any , i:any) => {
+          it['color'] = this.COLORS[i];
+          return it;
+        })
+        this.distribution.set(distribution);
+        this.platform.set(platform)
+        // console.log(this.distribution() , this.platform());
+        
+      }
+    })
   }
 
   // Helper method to get gradient style based on category
@@ -117,6 +145,7 @@ export class Overview  implements OnInit {
       // Handle form submission
     }
   }
+
 
 
 }

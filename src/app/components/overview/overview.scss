@@ -76,3 +76,15 @@
 .blur-3xl {
   --tw-blur: blur(64px);
 }
+.loader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.5);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

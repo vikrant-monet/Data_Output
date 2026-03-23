@@ -15,21 +15,23 @@ export class SecondaryCategoryPlatform  implements AfterViewInit, OnDestroy, OnI
   private chart: any;
   private resizeObserver?: ResizeObserver;
 
-  categoriesSignal = signal([
-  { name: 'Amazon Prime', value: 141, isSelected: false, color: '#0ea5e9' },
-  { name: 'TikTok', value: 120, isSelected: false, color: '#f43f5e' },
-  { name: 'Instagram Reels', value: 119, isSelected: false, color: '#22c55e' },
-  { name: 'YouTube', value: 116, isSelected: false, color: '#a855f7' },
-  { name: 'Netflix', value: 111, isSelected: false, color: '#ec4899' },
-  { name: 'YouTube Kids', value: 109, isSelected: false, color: '#f97316' },
-  { name: 'Peacock TV', value: 98, isSelected: false, color: '#06b6d4' },
-  { name: 'Snapchat', value: 94, isSelected: false, color: '#eab308' },
-  { name: 'Disney+', value: 92, isSelected: false, color: '#14b8a6' }
-]);
+//   platformSignal = signal([
+//   { name: 'Amazon Prime', value: 141, isSelected: false, color: '#0ea5e9' },
+//   { name: 'TikTok', value: 120, isSelected: false, color: '#f43f5e' },
+//   { name: 'Instagram Reels', value: 119, isSelected: false, color: '#22c55e' },
+//   { name: 'YouTube', value: 116, isSelected: false, color: '#a855f7' },
+//   { name: 'Netflix', value: 111, isSelected: false, color: '#ec4899' },
+//   { name: 'YouTube Kids', value: 109, isSelected: false, color: '#f97316' },
+//   { name: 'Peacock TV', value: 98, isSelected: false, color: '#06b6d4' },
+//   { name: 'Snapchat', value: 94, isSelected: false, color: '#eab308' },
+//   { name: 'Disney+', value: 92, isSelected: false, color: '#14b8a6' }
+// ]);
+
+ platformSignal = signal<any>('');
 
   ngOnInit(): void {
-    if (this.platform?.length) {
-      this.categoriesSignal.set(this.platform);
+    if (this.platform()?.length) {
+      this.platformSignal.set(this.platform());
     }
   }
 
@@ -46,7 +48,7 @@ export class SecondaryCategoryPlatform  implements AfterViewInit, OnDestroy, OnI
   }
 
   private initializeChart() {
-    const categories = this.categoriesSignal();
+    const categories = this.platformSignal();
 
     const maxValue = Math.max(...categories.map((c: any) => c.value));
 
